@@ -1,0 +1,99 @@
+/* ===== short course page: fixed hero (as on the long course pages), info cards, product box and promo banner ===== */
+.short-hero__spacer { width: 100%; height: 100vh; height: 100svh; pointer-events: none; }
+.short-hero {
+  --opacity: 0; position: fixed; top: 0; left: 0; right: 0; width: 100%; height: 100vh; height: 100svh; overflow: clip;
+  display: flex; align-items: flex-end;
+}
+.short-hero::after { content: ""; position: absolute; inset: 0; background: #000; opacity: var(--opacity); z-index: 1; pointer-events: none; }
+.short-hero__inner {
+  position: relative; display: grid; align-items: flex-start; grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: "a a a a a a a a a a a a" "b b b c c c . . d d d d";
+  column-gap: 24rem; row-gap: 10rem; width: 100%; z-index: 1; padding-bottom: 110rem;
+}
+.short-hero__top { grid-area: a; width: 100%; overflow: clip; }
+.short-hero__line { width: 100%; height: 1rem; background: hsla(0, 0%, 100%, .2); margin-top: 40rem; }
+.short-hero__info-wrap { grid-area: c; align-self: center; }
+.short-hero__info-wrap > :first-child { margin-bottom: 8rem; }
+.short-hero__title { width: 802rem; margin-left: 354rem; overflow: clip; }
+.short-hero__wordmark { display: block; font: 600 62rem/68rem var(--font-sans); letter-spacing: -.035em; color: #fff; white-space: nowrap; }
+.short-hero__wordmark sup { position: relative; top: .3em; margin-left: .12em; font-size: .3em; font-weight: 400; letter-spacing: 0; vertical-align: top; }
+.short-hero__paragraph { width: 330rem; margin-bottom: 24rem; }
+.short-hero__price { color: #ffa200; margin-bottom: 40rem; }
+.short-hero__buttons { display: flex; gap: 12rem; }
+.short-hero__box-wrap { grid-area: d; display: flex; align-items: flex-start; justify-content: flex-start; }
+.short-hero__box { width: 100%; max-width: 180rem; }
+.short-hero__scroll { position: absolute; bottom: 24rem; left: 354rem; overflow: clip; }
+.short-hero__video { position: absolute; inset: 0; }
+.short-hero__video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 25%, rgba(0, 0, 0, .902) 90%); }
+.short-hero__video img { display: block; width: 100%; height: 100%; object-fit: cover; animation: short-push 34s linear infinite alternate; }
+@keyframes short-push { from { transform: scale(1); } to { transform: scale(1.1) translate3d(-1%, -.6%, 0); } }
+
+/* ---- info cards (the "What's included" variant of the text-media cards) ---- */
+.tmc.tmc--info { padding-bottom: 120rem; }
+.tmc__subheading { display: flex; align-items: center; gap: 24rem; width: 100%; color: #ffa200; }
+.tmc__subheading::before, .tmc__subheading::after { content: ""; flex: 1 1; height: 1rem; background: #505050; }
+.tmc__doc {
+  position: absolute; z-index: 1; left: 21%; top: 12%; width: 58%; aspect-ratio: 3 / 4; padding: 8% 9%; display: flex; flex-direction: column; gap: 3.2%;
+  background: #efefea; border-radius: 3rem; box-shadow: 0 18rem 40rem rgba(0, 0, 0, .55); transform: rotate(var(--rot, -3deg));
+}
+.tmc__doc i { display: block; flex: none; width: var(--w, 60%); height: var(--h, 2.6%); border-radius: 99px; background: #b4b4ad; opacity: var(--o, 1); }
+.tmc__doc .tmc__doc-total { margin-top: auto; align-self: flex-end; background: #7d7d76; }
+.tmc__doc--grid { display: grid; grid-template-columns: repeat(3, 1fr); align-content: start; gap: 6rem 14rem; }
+.tmc__doc--grid i { height: 7rem; }
+.tmc__doc--dark { background: #0c0c0c; padding: 4%; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .22), 0 18rem 40rem rgba(0, 0, 0, .55); align-items: center; justify-content: center; }
+.tmc__doc--dark .badge { width: 100%; }
+
+/* ---- course banner: promo ticker, product copy and the box on a blurred still ---- */
+.course-banner { padding-top: 40rem; position: relative; width: 100%; }
+.course-banner__banner { position: relative; overflow: clip; border-radius: 12rem; }
+.course-banner__marquee { position: relative; z-index: 2; background: #ffa200; color: #000; padding: 10rem 0; overflow: hidden; white-space: nowrap; }
+.course-banner__track { display: flex; gap: 24rem; width: max-content; animation: course-banner-scroll 20s linear infinite; }
+.course-banner__item { display: flex; align-items: center; gap: 24rem; flex-shrink: 0; }
+.course-banner__dot { opacity: .7; }   /* the source uses .5, which fails WCAG contrast on the orange strip */
+@keyframes course-banner-scroll { 0% { transform: translateZ(0); } to { transform: translate3d(-50%, 0, 0); } }
+.course-banner__inner { position: relative; z-index: 1; display: flex; align-items: center; padding: 40rem 40rem 48rem; gap: 60rem; column-gap: 348rem; }
+.course-banner__content { display: flex; flex-direction: column; align-items: flex-start; max-width: 448rem; }
+.course-banner__logo { margin-bottom: 24rem; }
+.course-banner__logo .short-hero__wordmark { font-size: 33rem; line-height: 37rem; }
+.course-banner__overview { margin-bottom: 60rem; color: #b3b3b3; }
+.course-banner__contains { display: flex; flex-direction: column; width: 100%; margin-bottom: 60rem; }
+.course-banner__contains-item { display: flex; flex-direction: row; align-items: center; gap: 108rem; padding: 2rem 0 6rem; border-bottom: 1rem solid #505050; }
+.course-banner__plus { color: #ffa200; }
+.course-banner__price-wrap { display: flex; gap: 6rem; margin-bottom: 32rem; }
+.course-banner__buttons { display: flex; gap: 12rem; }
+.course-banner__price-label { color: #757575; }
+.course-banner__price { color: #ffa200; font-weight: 600; }
+.course-banner__box-wrap { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.course-banner__box { width: 340rem; }
+.course-banner__bg { position: absolute; inset: 0; z-index: 0; filter: blur(40px) brightness(.5); }
+.course-banner__bg img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.course-banner__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(35, 35, 35, .29) 30%, rgba(35, 35, 35, .29)); }
+@media (prefers-reduced-motion: reduce) { .course-banner__track, .short-hero__video img { animation: none; } }
+
+@media screen and (max-width: 480px) {
+  .short-hero__inner { grid-template-columns: repeat(2, 1fr); grid-template-areas: "d d" "b b" "a a" "c c"; column-gap: 24rem; row-gap: 24rem; padding-bottom: 42rem; padding-top: 200rem; }
+  .short-hero__top { flex-direction: column; gap: 24rem; width: 100%; padding-bottom: 0; }
+  .short-hero__line { margin-top: 24rem; }
+  .short-hero__title { width: 100%; margin-left: 0; }
+  .short-hero__wordmark { font-size: 40rem; line-height: 44rem; }
+  .short-hero__paragraph { width: 100%; margin-bottom: 28rem; }
+  .short-hero__price { margin-bottom: 28rem; }
+  .short-hero__buttons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12rem; }
+  .short-hero__box { max-width: 134rem; }
+  .short-hero__scroll { display: none; }
+
+
+  .course-banner { padding-block: 80rem; }
+  .course-banner__banner { border-radius: 8rem; }
+  .course-banner__marquee { padding: 8rem 0; }
+  .course-banner__inner { flex-direction: column-reverse; padding: 24rem 16rem; gap: 24rem; column-gap: 0; }
+  .course-banner__content { max-width: 100%; }
+  .course-banner__logo { margin-bottom: 16rem; }
+  .course-banner__logo .short-hero__wordmark { font-size: 25rem; line-height: 28rem; }
+  .course-banner__contains, .course-banner__overview { margin-bottom: 40rem; }
+  .course-banner__contains-item { gap: 12rem; padding: 2rem 0 6rem; }
+  .course-banner__price-wrap { margin-bottom: 20rem; }
+  .course-banner__buttons { width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); }
+  .course-banner__box-wrap { align-self: center; }
+  .course-banner__box { width: 140rem; }
+}

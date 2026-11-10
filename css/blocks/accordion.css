@@ -1,0 +1,114 @@
+/* Accordion — FAQ list (and, later, the course breakdown).  Rows are a 12-column grid: [index . . heading×5 chapters×2 view×2] */
+.accordion { position: relative; padding-top: 110rem; padding-bottom: 110rem; }
+.accordion__header { display: flex; justify-content: space-between; width: 1038rem; margin-bottom: 80rem; }
+.accordion__tag { margin-top: 8rem; }
+.accordion__lead { width: 684rem; }
+.accordion__title { margin-bottom: 40rem; }
+.accordion__buttons { display: flex; gap: 20rem; }
+
+.accordion__list, .accordion__tab { position: relative; }
+.accordion__button {
+  position: relative; isolation: isolate; width: 100%; text-align: left; color: inherit;
+  display: grid; grid-template-columns: repeat(12, 1fr); grid-template-areas: "a . . b b b b b c c d d";
+  align-items: center; gap: 24rem; padding: 12rem 0;
+  transition: color .5s cubic-bezier(.4, .4, .1, 1);
+}
+.accordion__index { grid-area: a; color: #505050; transition: color .5s cubic-bezier(.4, .4, .1, 1); }
+.accordion__heading { grid-area: b; }
+.accordion__chapters { grid-area: c; }
+.accordion__view { grid-area: d; display: flex; align-items: center; justify-self: flex-end; gap: 20rem; }
+.accordion__view-text { opacity: 0; transition: opacity .5s cubic-bezier(.4, .4, .1, 1); }
+.accordion__brackets { display: flex; align-items: center; gap: 4rem; color: #505050; transition: color .5s cubic-bezier(.4, .4, .1, 1); }
+.accordion__brackets svg { width: 8rem; height: 14rem; }
+.accordion__brackets g { fill: #505050; transition: fill .5s cubic-bezier(.4, .4, .1, 1); }
+.accordion__brackets path:nth-child(2) { transform-origin: 50% 46%; transition: transform .6s cubic-bezier(.4, .4, .1, 1); }
+
+/* hover / open fill: a #232323 bar that grows from the edge the pointer came in through.
+   Same look and timing as the source's height animation, but done with scaleY so it never triggers layout. */
+.accordion__button::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: -12rem; right: -12rem; background-color: #232323; z-index: -1;
+  transform: scaleY(0); transform-origin: top;
+  transition: transform .5s cubic-bezier(.4, .4, .1, 1);
+}
+.accordion__button.is-enter-top::after { transform: scaleY(1); transform-origin: top; }
+.accordion__button.is-enter-bottom::after { transform: scaleY(1); transform-origin: bottom; }
+.accordion__button.is-exit-bottom::after { transform: scaleY(0); transform-origin: bottom; }
+.accordion__button.is-exit-top::after { transform: scaleY(0); transform-origin: top; }
+.accordion__tab.is-open .accordion__button::after { transform: scaleY(1); }
+.accordion__tab.is-open .accordion__index,
+.accordion__tab.is-open .accordion__brackets { color: #fff; }
+.accordion__tab.is-open .accordion__view-text { opacity: 1; }
+.accordion__tab.is-open .accordion__brackets g { fill: #fff; }
+.accordion__tab.is-open .accordion__brackets path:nth-child(2) { transform: rotate(90deg); }
+
+/* the sliding panel */
+.accordion__panel {
+  width: 100%; display: flex; justify-content: flex-end; align-items: flex-start; overflow: hidden; height: 0; opacity: 0;
+  transition: height .6s cubic-bezier(.4, .4, .1, 1), opacity .6s linear;
+}
+.accordion__tab.is-open .accordion__panel { opacity: 1; }
+.accordion__tab-body { width: 100%; padding-left: 354rem; }
+.accordion__body-wrap { padding-bottom: 20rem; }
+.accordion__body { padding: 20rem 0; border-bottom: 1rem solid #333; }
+.accordion__body p { width: 566rem; }
+
+@media screen and (max-width: 480px) {
+  .accordion { padding-top: 60rem; padding-bottom: 60rem; }
+  .accordion__header { flex-direction: column; width: 100%; margin-bottom: 60rem; }
+  .accordion__tag { margin-top: 0; margin-bottom: 24rem; }
+  .accordion__lead { width: 100%; }
+  .accordion__button { display: flex; align-items: center; gap: 0; padding: 16rem 0; }
+  .accordion__index { width: 60rem; flex-shrink: 0; }
+  .accordion__heading { width: 100%; }
+  .accordion__chapters { padding-top: 12rem; }
+  .accordion__view { flex-shrink: 0; padding-left: 12rem; }
+  .accordion__tab-body { padding-left: 0; }
+  .accordion__body { padding: 20rem 0 40rem; }
+  .accordion__body p { width: 100%; }
+}
+
+/* ---- course breakdown: chapter cards (3-up grid; a swipeable row on phones), collapsible lesson list, toggle ---- */
+.accordion__slider { width: 1038rem; margin: 0 0 40rem auto; }
+.accordion__slider-viewport { width: 100%; }
+.accordion__slider-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40rem; width: 100%; }
+.accordion__card { display: flex; flex-direction: column; justify-content: space-between; }
+.accordion__card .img { display: block; position: relative; overflow: hidden; aspect-ratio: 1320 / 744; }
+.accordion__card .img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.accordion__card-info { display: flex; gap: 24rem; margin-top: 12rem; }
+.accordion__card-index { width: 94rem; }
+.accordion__progress { display: none; }
+
+.accordion__list-wrap { height: 0; overflow: hidden; transition: height .8s cubic-bezier(.4, .4, .1, 1); }
+.accordion__tab-chapters { grid-area: c; }
+.accordion__tab-body .accordion__chapters-mobile { display: none; }
+.accordion__body-list { padding-bottom: 40rem; }
+.accordion__inner-item {
+  display: grid; grid-template-columns: repeat(9, 1fr); grid-template-areas: "a a a a a b b c c"; align-items: center; gap: 24rem;
+  padding: 16rem 0; border-bottom: 1rem solid #232323;
+}
+.accordion__item-title { grid-area: a; }
+.accordion__duration { grid-area: b; color: #505050; }
+.accordion__item-index { grid-area: c; justify-self: flex-end; color: #505050; }
+.accordion__toggle-wrap { display: grid; grid-template-columns: repeat(12, 1fr); grid-template-areas: "a . . b b b b b c c d d"; margin-top: 20rem; padding: 20rem 0; gap: 24rem; }
+.accordion__toggle { grid-area: b; max-width: 240rem; }
+.accordion__toggle svg { transition: transform .4s var(--ease-out); transform: rotate(90deg); }
+.accordion__toggle.is-open svg { transform: rotate(-90deg); }
+
+@media screen and (max-width: 480px) {
+  .accordion__slider { width: 100%; margin-bottom: 40rem; }
+  .accordion__slider-viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-right: -12rem; }
+  .accordion__slider-viewport::-webkit-scrollbar { display: none; }
+  .accordion__slider-container { display: flex; column-gap: 12rem; width: auto; }
+  .accordion__card { width: 327rem; flex-shrink: 0; scroll-snap-align: start; }
+  .accordion__card-info { gap: 12rem; }
+  .accordion__card-index { width: 79rem; margin-left: -2rem; }
+  .accordion__progress { display: block; position: relative; overflow: clip; width: 100%; margin: 0 0 12rem; height: 1rem; background: #232323; }
+  .accordion__progress::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff; transform-origin: left; transform: translateZ(0) scaleX(var(--scale, 0)); }
+  .accordion__tab-chapters { display: none; }
+  .accordion__tab-body .accordion__chapters-mobile { display: block; padding-top: 12rem; }
+  .accordion__body-list { padding-top: 12rem; padding-bottom: 40rem; }
+  .accordion__inner-item { display: flex; flex-direction: row; justify-content: space-between; gap: 12rem; padding: 16rem 0; }
+  .accordion__item-index { display: none; }
+  .accordion__toggle-wrap { display: block; width: 100%; }
+  .accordion__toggle { width: 100%; max-width: 100%; }
+}

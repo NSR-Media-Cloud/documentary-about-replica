@@ -1,0 +1,54 @@
+/* Course page hero: a FIXED full-screen backdrop; a 100svh spacer scrolls past it while a black overlay dims it (0 → .8 over the first screen).
+   Everything after the hero lives in .course-body, which covers the backdrop. */
+.course-hero__spacer { width: 100%; height: 100vh; height: 100svh; pointer-events: none; }
+.course-hero {
+  --opacity: 0;
+  position: fixed; top: 0; left: 0; right: 0; width: 100%; height: 100vh; height: 100svh; overflow: clip;
+  display: flex; align-items: flex-end;
+}
+.course-hero::after { content: ""; position: absolute; inset: 0; background: #000; opacity: var(--opacity); z-index: 1; pointer-events: none; }
+.course-hero__inner {
+  position: relative; display: grid; align-items: flex-start; grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: "a a a a a a a a a a a a" "b b b c c c . . d d e e";
+  column-gap: 24rem; row-gap: 52rem; width: 100%; z-index: 1; padding-bottom: 110rem;
+}
+.course-hero__top { grid-area: a; width: 100%; overflow: clip; }
+.course-hero__title { width: 802rem; margin-left: 354rem; overflow: clip; }
+.course-hero__logo { --logo-h: 68rem; }
+.course-hero__line { width: 100%; height: 1rem; background: rgba(255, 255, 255, .2); margin-top: 40rem; }
+.course-hero__pill { width: fit-content; color: #ffa200; padding: 8rem 12rem; margin-left: 354rem; margin-bottom: 14rem; border-radius: 9999px; border: 1rem solid #ffa200; }
+.course-hero__info-wrap { grid-area: c; }
+.course-hero__heading { color: #b3b3b3; margin-bottom: 12rem; overflow: clip; }
+.course-hero__paragraph { width: 330rem; margin-bottom: 40rem; }
+.course-hero__buttons { display: flex; gap: 12rem; }
+.course-hero__flex { grid-area: d; display: flex; gap: 18rem; flex-direction: column; height: 100%; }
+.course-hero__contains { grid-area: e; }
+.course-hero__info { list-style: none; overflow: clip; gap: 12rem; }
+.course-hero__contains ul { gap: 8rem; }
+.course-hero__contains li { display: block; padding-left: 12rem; position: relative; }
+.course-hero__contains li::before { position: absolute; left: 0; content: "•"; }
+.course-hero__scroll { position: absolute; bottom: 24rem; left: 354rem; overflow: clip; }
+.course-hero__ribbon {
+  position: absolute; bottom: 0; left: 0; padding: 8rem 42rem; background: #ffa200; color: #000; display: flex; align-items: center; justify-content: center;
+  transform: rotate(45deg) translateX(-72rem) translateY(-4rem); text-align: center; z-index: 1;
+}
+.course-hero__media { position: absolute; inset: 0; }
+.course-hero__media .img { position: absolute; inset: 0; height: 100%; }
+.course-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+.course-hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 25%, rgba(0, 0, 0, .902) 90%); }
+
+.course-body { position: relative; z-index: 1; background: #000; }
+.course-page .footer { position: relative; z-index: 1; background: #000; }
+
+@media screen and (max-width: 480px) {
+  .course-hero__inner { grid-template-columns: repeat(2, 1fr); grid-template-areas: "b b" "a a" "c c" "d e"; column-gap: 24rem; row-gap: 24rem; padding-bottom: 42rem; padding-top: 200rem; }
+  .course-hero__top { flex-direction: column; gap: 24rem; width: 100%; padding-bottom: 0; }
+  .course-hero__line { margin-top: 24rem; }
+  .course-hero__title { width: 100%; margin-left: 0; }
+  .course-hero__pill { padding: 6rem 12rem 4rem; margin-left: 0; margin-bottom: 12rem; }
+  .course-hero__logo { --logo-h: 32rem; }
+  .course-hero__paragraph { width: 100%; margin-bottom: 28rem; }
+  .course-hero__buttons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12rem; }
+  .course-hero__scroll { display: none; }
+  .course-hero__ribbon { padding: 8rem 38rem; transform: rotate(45deg) translateX(-48rem) translateY(0); }
+}

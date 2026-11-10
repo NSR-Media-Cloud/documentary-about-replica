@@ -1,0 +1,23 @@
+/* Legal pages — sticky "Sections" list on the left, long-form text on the right */
+.legal { position: relative; display: flex; align-items: flex-start; justify-content: space-between; padding: 120rem 24rem 0; }
+.legal__header { position: sticky; top: 120rem; width: 330rem; }
+.legal__sections-heading { margin-bottom: 20rem; }
+.legal__links { display: flex; flex-direction: column; gap: 4rem; }
+.legal__links li { display: flex; align-items: flex-start; color: #505050; transition: color .3s linear; }
+.legal__links li.is-active, .legal__links li:hover { color: #fff; }
+.legal__content { display: flex; flex-direction: column; row-gap: 60rem; width: 566rem; margin-right: 236rem; }
+.legal__block { padding-top: 120rem; margin-top: -120rem; }   /* anchor offset: scrolling to a block lands its heading 120rem down */
+.legal__content h2 { margin-bottom: 24rem; }
+.legal__content h3 { margin-top: 24rem; margin-bottom: 16rem; }
+
+@media screen and (max-width: 480px) {
+  .legal { justify-content: flex-start; flex-direction: column; padding-left: 0; padding-right: 0; gap: 40rem; }
+  .legal__header { top: 74rem; width: 100%; background-color: #000; z-index: 1; }
+  .legal__sections-heading { display: none; }
+  .legal__links { flex-direction: row; gap: 16rem; overflow: scroll; padding: 0 12rem; scrollbar-width: none; }
+  .legal__links::-webkit-scrollbar { display: none; }
+  .legal__links li { flex-shrink: 0; align-items: center; white-space: nowrap; padding-left: 12rem; margin-left: -12rem; }
+  .legal__links li:hover:not(.is-active) { color: #505050; }
+  .legal__content { width: 100%; padding: 0 12rem; margin-right: 0; }
+  .legal__block { padding-top: 140rem; margin-top: -140rem; }
+}

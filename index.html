@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Reel Truth Academy</title>
+  <meta name="description" content="Practical documentary teaching, taught by makers">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/InstrumentSans-400-latin.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/FragmentMono-400-latin.woff2">
+
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/type.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/sections.css">
+  <link rel="stylesheet" href="/css/blocks/home.css">
+  <link rel="stylesheet" href="/css/blocks/enterprise.css">
+  <link rel="stylesheet" href="/css/blocks/courses.css">
+  <link rel="stylesheet" href="/css/blocks/course-hero.css">
+  <link rel="stylesheet" href="/css/blocks/accordion.css">
+  <link rel="stylesheet" href="/css/blocks/film-grid.css">
+  <link rel="stylesheet" href="/css/blocks/course-blocks.css">
+  <link rel="stylesheet" href="/css/blocks/boxart.css">
+  <link rel="stylesheet" href="/css/blocks/contactform.css">
+  <link rel="stylesheet" href="/css/blocks/cta-click.css">
+  <link rel="stylesheet" href="/css/blocks/text-media-cards.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');try{if(sessionStorage.getItem('rta-tr')){document.documentElement.classList.add('tr-cover');sessionStorage.removeItem('rta-tr');}}catch(e){}</script>
+</head>
+<body>
+<a class="skip-link t-mono-s" href="#main">Skip to content</a>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="pre-wrapper" role="status" aria-live="polite">
+  <div class="preloader__bg"></div>
+  <div class="preloader__container padding">
+    <div class="preloader__loading t-mono-s">
+      <div class="preloader__text-wrap"><div>[ Reel Truth Academy ]</div></div>
+      <div class="preloader__text-wrap"><div id="pre-percentage">[ 00 Percent ]</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav padding" id="nav" aria-label="Primary" style="--scrolled:0">
+  <a class="nav__logo" href="/" aria-label="Reel Truth Academy homepage">
+    <svg width="66" height="24" viewBox="0 0 65.91 24" fill="none" aria-hidden="true"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+  </a>
+  <div class="nav__buttons">
+    <button class="btn btn--border nav__button nav__menu-button" type="button" aria-expanded="false" aria-controls="menu"><span class="t-mono-s">Menu</span></button>
+    <button class="btn btn--border nav__button" type="button" data-open-subscribe><span class="t-mono-s">Join now</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+  </div>
+</nav>
+
+<!-- ============ MENU ============ -->
+<div class="menu" id="menu" role="navigation" aria-label="Site menu" data-lenis-prevent inert aria-hidden="true">
+  <div class="menu__bg"></div>
+  <div class="menu__inner">
+    <div class="menu__links-left">
+      <div class="menu__list">
+        <div class="menu__list-heading t-mono orange"><span class="menu__heading-span">Pages</span></div>
+        <ul>
+          <li><a class="menu__page-link menu__page-link--active t-p" href="/" aria-current="page">Home</a></li>
+          <li><a class="menu__page-link t-p" href="/courses">Courses</a></li>
+          <li><a class="menu__page-link t-p" href="/certification">Certification</a></li>
+          <li><a class="menu__page-link t-p" href="/funding">Funding</a></li>
+          <li><a class="menu__page-link t-p" href="/short-documentary-competition">Competition</a></li>
+          <li><a class="menu__page-link t-p" href="/enterprise">Enterprise</a></li>
+          <li><a class="menu__page-link t-p" href="/about">About</a></li>
+          <li><a class="menu__page-link t-p" href="/frequently-asked-questions">FAQ</a></li>
+          <li><a class="menu__page-link t-p" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu__list">
+        <div class="menu__list-heading t-mono orange"><span class="menu__heading-span">Socials</span></div>
+        <ul>
+          <li><a class="menu__social-link social-link t-p t-social" href="https://www.youtube.com/" target="_blank" rel="noopener"><span>YouTube</span><div><div>[</div><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><g><path d="M9.17163 1.17139H14.8285M14.8285 1.17139V6.82825M14.8285 1.17139L9.17163 6.82825" stroke="#fff" stroke-linejoin="round"/><path d="M1.17163 9.17139H6.82848M6.82848 9.17139V14.8282M6.82848 9.17139L1.17163 14.8282" stroke="#fff" stroke-linejoin="round"/></g></svg><div>]</div></div></a></li>
+          <li><a class="menu__social-link social-link t-p t-social" href="https://www.instagram.com/" target="_blank" rel="noopener"><span>Instagram</span><div><div>[</div><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><g><path d="M9.17163 1.17139H14.8285M14.8285 1.17139V6.82825M14.8285 1.17139L9.17163 6.82825" stroke="#fff" stroke-linejoin="round"/><path d="M1.17163 9.17139H6.82848M6.82848 9.17139V14.8282M6.82848 9.17139L1.17163 14.8282" stroke="#fff" stroke-linejoin="round"/></g></svg><div>]</div></div></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu__list menu__links-right">
+      <div class="menu__list-heading t-mono orange"><span class="menu__heading-span">Courses</span></div>
+      <ul>
+        <li><a class="menu__page-link t-mc" href="/courses/nonfiction-foundations">Nonfiction Foundations</a></li>
+        <li><a class="menu__page-link t-mc" href="/courses/advanced-storytelling">Advanced Storytelling</a></li>
+        <li><a class="menu__page-link t-mc" href="/courses/make-and-sell">Make &amp; Sell</a></li>
+        <li><a class="menu__page-link t-mc" href="/courses/the-final-cut">The Final Cut</a></li>
+        <li><a class="menu__page-link t-mc" href="/courses/the-roving-eye">The Roving Eye</a></li>
+        <li><a class="menu__page-link t-mc" href="/courses/field-notes-pro">Field Notes Pro<div class="menu__pill t-nct"><div>New</div></div></a></li>
+        <li><a class="menu__page-link t-mc" href="/courses/producing-essentials">Producing Essentials<div class="menu__pill t-nct"><div>New</div></div></a></li>
+      </ul>
+      <div class="menu__btns-wrap">
+        <a class="btn btn--orange menu__login" href="/contact"><span class="t-mono-s">Login</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+      </div>
+    </div>
+
+    <div class="menu__image-wrap desktop" aria-hidden="true">
+      <div class="menu__image-container"><picture class="img menu__image"><img src="/assets/img/course-1.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture><span class="menu__cover-title">Nonfiction Foundations</span></div>
+      <div class="menu__image-container"><picture class="img menu__image"><img src="/assets/img/course-2.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture><span class="menu__cover-title">Advanced Storytelling</span></div>
+      <div class="menu__image-container"><picture class="img menu__image"><img src="/assets/img/course-3.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture><span class="menu__cover-title">Make &amp; Sell</span></div>
+      <div class="menu__image-container"><picture class="img menu__image"><img src="/assets/img/course-4.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture><span class="menu__cover-title">The Final Cut</span></div>
+      <div class="menu__image-container"><picture class="img menu__image"><img src="/assets/img/course-5.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture><span class="menu__cover-title">The Roving Eye</span><div class="menu__ribbon t-mono"><div class="moveUpF" style="--delay:.4s">New course</div></div></div>
+      <div class="menu__image-container"><picture class="img menu__image"><img src="/assets/img/course-6.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture><span class="menu__cover-title">Field Notes Pro</span><div class="menu__ribbon t-mono"><div class="moveUpF" style="--delay:.4s">New Course</div></div></div>
+      <div class="menu__image-container"><picture class="img menu__image"><img src="/assets/img/course-7.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture><span class="menu__cover-title">Producing Essentials</span></div>
+    </div>
+
+    <div class="menu__meta t-mono-s">
+      <ul class="menu__legals">
+        <li><a class="t-link" href="/legals/privacy-policy"><span>Privacy Policy</span></a></li>
+        <li><a class="t-link" href="/legals/terms-of-use"><span>Terms of Use</span></a></li>
+      </ul>
+      <div class="desktop">Practical documentary teaching, taught by makers</div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <header class="hero-centered padding">
+    <div class="hero-centered__inner">
+      <div class="hero-centered__group">
+        <div class="hero-centered__tag t-mono-s" data-split>The Reel Truth Academy</div>
+        <h1 class="hero-centered__heading t-l" data-split>Ready to make your first real film?</h1>
+      </div>
+    </div>
+    <div class="hero-centered__buttons">
+      <div class="blurFade" style="--delay:1.1s"><a class="btn btn--orange" href="/courses"><span class="t-mono-s">Courses</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      <div class="blurFade" style="--delay:1.15s"><button class="btn btn--light" type="button" data-watch data-poster="/assets/img/hero-5.jpg" data-title="The Reel Truth Academy"><span class="t-mono-s">Watch trailer</span><svg class="btn__play" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.4 2.1v7.8L9.9 6z" fill="currentColor"/></svg></button></div>
+    </div>
+    <div class="hero-centered__video heroMediaClip" style="--delay:.5s" aria-hidden="true"><img src="/assets/img/hero-5.jpg" alt="" width="1792" height="1008" fetchpriority="high" decoding="async"></div>
+  </header>
+
+  <section class="glide padding">
+    <header class="glide__header"><h2 class="glide__heading t-mb"><span style="display:block">RTA is here to help you make <span style="color:#FFA200">honest films.</span></span></h2></header>
+    <div class="glide__list" data-glide>
+      <div class="glide__band" aria-hidden="true"><div class="glide__title-mask"><div class="glide__titles"><span class="glide__band-title t-xsb">Even if you...</span><span class="glide__band-title t-xsb">We’ll help you...</span></div></div></div>
+      <div class="glide__group"><h3 class="glide__group-title t-xsb">Even if you...</h3><ul class="glide__track"><li class="glide__item t-xsb">have never held a camera</li><li class="glide__item t-xsb">can’t afford much gear</li><li class="glide__item t-xsb">only have weekends free</li></ul></div>
+      <div class="glide__group"><h3 class="glide__group-title t-xsb">We’ll help you...</h3><ul class="glide__track"><li class="glide__item t-xsb">find a story close to home</li><li class="glide__item t-xsb">shoot it with what you own</li><li class="glide__item t-xsb">get it in front of an audience</li></ul></div>
+    </div>
+  </section>
+
+  <section class="stats padding">
+    <header><h2 class="t-mono orange" aria-hidden="true"></h2><h3 class="t-m">Over 3000 filmmakers have moved their careers forward with RTA</h3></header>
+    <div class="stats__row">
+      <div class="stats__item"><span class="t-mono-s">Completed docs</span><div class="stats__number t-xl">+1200</div></div>
+      <div class="stats__item"><span class="t-mono-s">In new client contracts</span><div class="stats__number t-xl">$Millions</div></div>
+      <div class="stats__item"><span class="t-mono-s">Laurels + festival selections</span><div class="stats__number t-xl">+640</div></div>
+    </div>
+  </section>
+
+  <section class="quote-frame" data-quote-frame aria-roledescription="carousel" aria-label="Student stories">
+    <div class="quote-frame__viewport"><div class="quote-frame__container">
+      <div class="quote-frame__slide" aria-roledescription="slide" aria-label="1 of 4">
+        <header class="padding"><span class="quote-frame__name t-xs">Maren Voss</span><h2 class="t-ms"><span style="display:block">“Our short film passed a million views online and has just been nominated for a regional screen award.”</span></h2></header>
+        <div class="quote-frame__parallax"><picture class="img quote-frame__image"><source media="(max-width: 480px)" srcset="/assets/img/founder-1-sm.jpg" width="1000" height="1810"><img src="/assets/img/hero-2.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture></div>
+      </div>
+      <div class="quote-frame__slide" aria-roledescription="slide" aria-label="2 of 4">
+        <header class="padding"><span class="quote-frame__name t-xs">Ilan Cruz</span><h2 class="t-ms"><span style="display:block">“I finished my first documentary and premiered it at our local mountain film festival.”</span></h2></header>
+        <div class="quote-frame__parallax"><picture class="img quote-frame__image"><source media="(max-width: 480px)" srcset="/assets/img/founder-2-sm.jpg" width="1000" height="1810"><img src="/assets/img/hero-3.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture></div>
+      </div>
+      <div class="quote-frame__slide" aria-roledescription="slide" aria-label="3 of 4">
+        <header class="padding"><span class="quote-frame__name t-xs">Priya Nandakumar</span><h2 class="t-ms"><span style="display:block">“I just landed my first paid shoots with two national brands and a documentary series, all from skills I learned here.”</span></h2></header>
+        <div class="quote-frame__parallax"><picture class="img quote-frame__image"><source media="(max-width: 480px)" srcset="/assets/img/hero-1.jpg" width="1000" height="1810"><img src="/assets/img/founder-1-lg.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture></div>
+      </div>
+      <div class="quote-frame__slide" aria-roledescription="slide" aria-label="4 of 4">
+        <header class="padding"><span class="quote-frame__name t-xs">Tomas Okafor</span><h2 class="t-ms"><span style="display:block">“We just had the privilege of winning an award for our documentary, and none of it would have happened without the feedback and the community around me.”</span></h2></header>
+        <div class="quote-frame__parallax"><picture class="img quote-frame__image"><source media="(max-width: 480px)" srcset="/assets/img/hero-4.jpg" width="1000" height="1810"><img src="/assets/img/founder-2-lg.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture></div>
+      </div>
+    </div></div>
+    <div class="quote-frame__controls"><button type="button" data-prev aria-label="Previous story"></button><button type="button" data-next aria-label="Next story"></button></div>
+  </section>
+
+  <section class="home-cards">
+    <header><h2 class="t-m"><span style="display:block">Unlock new career possibilities with <span style="color:#FFA200">our courses</span> today</span></h2></header>
+    <div class="home-cards__groups padding">
+      <div class="home-cards__group">
+        <div class="home-cards__group-header t-mono"><h3>Directing</h3><span class="home-cards__rule"></span></div>
+        <div class="home-cards__cards">
+          <article class="home-cards__card">
+            <div class="home-cards__upper">
+              <div class="home-cards__copy">
+                <h4 class="vh-hidden">Nonfiction Foundations</h4>
+                <div class="home-cards__logo" style="--lh:40rem;--lhm:37.5rem"><div class="course-logo course-logo--stack" aria-hidden="true"><small>Nonfiction</small><b>Foundations<sup>™</sup></b></div></div>
+                <p class="home-cards__overview t-mp">Learn the full loop: find a story, shoot it, cut it and put it in front of a real live audience.</p>
+              </div>
+              <ul class="home-cards__details"><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>No big budget needed</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Finish your first film</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Share it with an audience</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Use the gear you own</li></ul>
+            </div>
+            <div class="home-cards__lower">
+              <div class="home-cards__meta">
+                <div class="home-cards__cost t-sb"><span>$529</span></div>
+                <div class="home-cards__buttons">
+                  <button class="btn btn--orange" type="button" data-open-subscribe><span class="t-mono-s">JOIN NOW</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+                  <a class="btn btn--border" href="/courses/nonfiction-foundations"><span class="t-mono-s">LEARN MORE</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+                </div>
+              </div>
+              <div class="home-cards__box-wrap"><div class="home-cards__box"><div class="boxart" aria-hidden="true">
+            <div class="boxart__spine"></div>
+            <div class="boxart__face">
+              <img class="boxart__img" src="/assets/img/hero-2.jpg" alt="" width="568" height="785" loading="lazy" decoding="async">
+              <div class="boxart__shade"></div>
+              <svg class="boxart__logo" viewBox="0 0 65.91 24" fill="currentColor"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+              <div class="boxart__title">Nonfiction<br>Foundations<sup>™</sup></div>
+              <div class="boxart__marks"><i></i><i></i><i></i><i></i></div>
+              <div class="boxart__fine">Video lessons · guides · community</div>
+            </div>
+          </div></div></div>
+            </div>
+          </article>
+          <article class="home-cards__card">
+            <div class="home-cards__upper">
+              <div class="home-cards__copy">
+                <h4 class="vh-hidden">Advanced Storytelling</h4>
+                <div class="home-cards__logo" style="--lh:30rem;--lhm:28.8rem"><div class="course-logo course-logo--light" aria-hidden="true"><b>Advanced Storytelling<sup>™</sup></b></div></div>
+                <p class="home-cards__overview t-mp">Go deeper into structure, voice and edit so your films can hold a room.</p>
+              </div>
+              <ul class="home-cards__details"><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Shape your breakthrough film</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Build your team</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Work with a larger budget</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Find your voice</li></ul>
+            </div>
+            <div class="home-cards__lower">
+              <div class="home-cards__meta">
+                <div class="home-cards__cost t-sb"><span>$779</span></div>
+                <div class="home-cards__buttons">
+                  <button class="btn btn--orange" type="button" data-open-subscribe><span class="t-mono-s">JOIN NOW</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+                  <a class="btn btn--border" href="/courses/advanced-storytelling"><span class="t-mono-s">LEARN MORE</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+                </div>
+              </div>
+              <div class="home-cards__box-wrap"><div class="home-cards__box"><div class="boxart" aria-hidden="true">
+            <div class="boxart__spine"></div>
+            <div class="boxart__face">
+              <img class="boxart__img" src="/assets/img/hero-3.jpg" alt="" width="568" height="785" loading="lazy" decoding="async">
+              <div class="boxart__shade"></div>
+              <svg class="boxart__logo" viewBox="0 0 65.91 24" fill="currentColor"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+              <div class="boxart__title">Advanced Storytelling<sup>™</sup></div>
+              <div class="boxart__marks"><i></i><i></i><i></i><i></i></div>
+              <div class="boxart__fine">Video lessons · guides · community</div>
+            </div>
+          </div></div></div>
+            </div>
+          </article>
+          <article class="home-cards__card">
+            <div class="home-cards__upper">
+              <div class="home-cards__copy">
+                <h4 class="vh-hidden">Make &amp; Sell</h4>
+                <div class="home-cards__logo" style="--lh:56rem;--lhm:52.9rem"><div class="course-logo course-logo--heavy" aria-hidden="true"><b>Make &amp; Sell<sup>™</sup></b></div></div>
+                <p class="home-cards__overview t-mp">Everything you need to build a steady, profitable career behind a lens.</p>
+              </div>
+              <ul class="home-cards__details"><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Build a video business model</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Land long-term clients</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Price your jobs</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Make money on YouTube</li></ul>
+            </div>
+            <div class="home-cards__lower">
+              <div class="home-cards__meta">
+                <div class="home-cards__cost t-sb"><span>$679</span></div>
+                <div class="home-cards__buttons">
+                  <button class="btn btn--orange" type="button" data-open-subscribe><span class="t-mono-s">JOIN NOW</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+                  <a class="btn btn--border" href="/courses/make-and-sell"><span class="t-mono-s">LEARN MORE</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+                </div>
+              </div>
+              <div class="home-cards__box-wrap"><div class="home-cards__box"><div class="boxart" aria-hidden="true">
+            <div class="boxart__spine"></div>
+            <div class="boxart__face">
+              <img class="boxart__img" src="/assets/img/hero-6.jpg" alt="" width="568" height="785" loading="lazy" decoding="async">
+              <div class="boxart__shade"></div>
+              <svg class="boxart__logo" viewBox="0 0 65.91 24" fill="currentColor"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+              <div class="boxart__title">Make &amp; Sell<sup>™</sup></div>
+              <div class="boxart__marks"><i></i><i></i><i></i><i></i></div>
+              <div class="boxart__fine">Video lessons · guides · community</div>
+            </div>
+          </div></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="home-cards__group">
+        <div class="home-cards__group-header t-mono"><h3>Craft</h3><span class="home-cards__rule"></span></div>
+        <div class="home-cards__cards">
+          <article class="home-cards__card">
+            <div class="home-cards__upper">
+              <div class="home-cards__copy">
+                <h4 class="vh-hidden">The Final Cut</h4>
+                <div class="home-cards__logo" style="--lh:44rem;--lhm:41.3rem"><div class="course-logo course-logo--wide" aria-hidden="true"><b>The Final Cut<sup>™</sup></b></div></div>
+                <p class="home-cards__overview t-mp">A practical guide to fast, clean and gripping documentary cuts.</p>
+              </div>
+              <ul class="home-cards__details"><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Stay organised from day one</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>A fast, efficient editing system</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>From ingest to delivery</li></ul>
+            </div>
+            <div class="home-cards__lower">
+              <div class="home-cards__meta">
+                <div class="home-cards__cost t-sb"><span>$679</span></div>
+                <div class="home-cards__buttons">
+                  <button class="btn btn--orange" type="button" data-open-subscribe><span class="t-mono-s">JOIN NOW</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+                  <a class="btn btn--border" href="/courses/the-final-cut"><span class="t-mono-s">LEARN MORE</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+                </div>
+              </div>
+              <div class="home-cards__box-wrap"><div class="home-cards__box"><div class="boxart" aria-hidden="true">
+            <div class="boxart__spine"></div>
+            <div class="boxart__face">
+              <img class="boxart__img" src="/assets/img/hero-5.jpg" alt="" width="568" height="785" loading="lazy" decoding="async">
+              <div class="boxart__shade"></div>
+              <svg class="boxart__logo" viewBox="0 0 65.91 24" fill="currentColor"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+              <div class="boxart__title">The Final Cut<sup>™</sup></div>
+              <div class="boxart__marks"><i></i><i></i><i></i><i></i></div>
+              <div class="boxart__fine">Video lessons · guides · community</div>
+            </div>
+          </div></div></div>
+            </div>
+          </article>
+          <article class="home-cards__card">
+            <div class="home-cards__upper">
+              <div class="home-cards__copy">
+                <h4 class="vh-hidden">The Roving Eye</h4>
+                <div class="home-cards__logo" style="--lh:49rem;--lhm:47.1rem"><div class="course-logo course-logo--heavy" aria-hidden="true"><b>The Roving Eye<sup>™</sup></b></div></div>
+                <p class="home-cards__overview t-mp">The craft of shooting vivid, honest pictures that carry a whole story.</p>
+              </div>
+              <ul class="home-cards__details"><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Elevate your cinematography</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Lighting from basic to advanced</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Shoot with confidence in any kind of location</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Master colour grading</li></ul>
+            </div>
+            <div class="home-cards__lower">
+              <div class="home-cards__meta">
+                <div class="home-cards__cost t-sb"><span>$779</span></div>
+                <div class="home-cards__buttons">
+                  <button class="btn btn--orange" type="button" data-open-subscribe><span class="t-mono-s">JOIN NOW</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+                  <a class="btn btn--border" href="/courses/the-roving-eye"><span class="t-mono-s">LEARN MORE</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+                </div>
+              </div>
+              <div class="home-cards__box-wrap"><div class="home-cards__box"><div class="boxart" aria-hidden="true">
+            <div class="boxart__spine"></div>
+            <div class="boxart__face">
+              <img class="boxart__img" src="/assets/img/founder-1-lg.jpg" alt="" width="568" height="785" loading="lazy" decoding="async">
+              <div class="boxart__shade"></div>
+              <svg class="boxart__logo" viewBox="0 0 65.91 24" fill="currentColor"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+              <div class="boxart__title">The Roving Eye<sup>™</sup></div>
+              <div class="boxart__marks"><i></i><i></i><i></i><i></i></div>
+              <div class="boxart__fine">Video lessons · guides · community</div>
+            </div>
+          </div></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="home-cards__group">
+        <div class="home-cards__group-header t-mono"><h3>Business</h3><span class="home-cards__rule"></span></div>
+        <div class="home-cards__cards">
+          <article class="home-cards__card">
+            <div class="home-cards__upper">
+              <div class="home-cards__copy">
+                <h4 class="vh-hidden">Field Notes Pro</h4>
+                <div class="home-cards__logo" style="--lh:44rem;--lhm:42.3rem"><div class="course-logo course-logo--mix" aria-hidden="true"><b>Field Notes<i>PRO</i><sup>™</sup></b></div></div>
+                <p class="home-cards__overview t-mp">Your route to becoming a trusted documentary cameraperson on set.</p>
+              </div>
+              <ul class="home-cards__details"><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Become a top-tier camera op</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Advanced camera techniques</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Brand and market yourself</li></ul>
+            </div>
+            <div class="home-cards__lower">
+              <div class="home-cards__meta">
+                <div class="home-cards__cost t-sb"><span>$779</span></div>
+                <div class="home-cards__buttons">
+                  <button class="btn btn--orange" type="button" data-open-subscribe><span class="t-mono-s">JOIN NOW</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+                  <a class="btn btn--border" href="/courses/field-notes-pro"><span class="t-mono-s">LEARN MORE</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+                </div>
+              </div>
+              <div class="home-cards__box-wrap"><div class="home-cards__box"><div class="boxart" aria-hidden="true">
+            <div class="boxart__spine"></div>
+            <div class="boxart__face">
+              <img class="boxart__img" src="/assets/img/founder-2-lg.jpg" alt="" width="568" height="785" loading="lazy" decoding="async">
+              <div class="boxart__shade"></div>
+              <svg class="boxart__logo" viewBox="0 0 65.91 24" fill="currentColor"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+              <div class="boxart__title">Field Notes<br>PRO<sup>™</sup></div>
+              <div class="boxart__marks"><i></i><i></i><i></i><i></i></div>
+              <div class="boxart__fine">Video lessons · guides · community</div>
+            </div>
+          </div></div></div>
+            </div>
+          </article>
+          <article class="home-cards__card">
+            <div class="home-cards__upper">
+              <div class="home-cards__copy">
+                <h4 class="vh-hidden">Producing Essentials</h4>
+                <div class="home-cards__logo" style="--lh:61rem;--lhm:57.7rem"><div class="course-logo course-logo--stack-light" aria-hidden="true"><small>Producing</small><b>Essentials<sup>™</sup></b></div></div>
+                <p class="home-cards__overview t-mp">From budget to delivery: fund, schedule and manage a documentary so that it lands on time and on budget.</p>
+              </div>
+              <ul class="home-cards__details"><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Budget templates</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Pitch like a pro</li><li class="home-cards__detail t-mp"><span class="home-cards__dot"></span>Deliver on budget, on time</li></ul>
+            </div>
+            <div class="home-cards__lower">
+              <div class="home-cards__meta">
+                <div class="home-cards__cost t-sb"><span>$679</span></div>
+                <div class="home-cards__buttons">
+                  <button class="btn btn--orange" type="button" data-open-subscribe><span class="t-mono-s">JOIN NOW</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+                  <a class="btn btn--border" href="/courses/producing-essentials"><span class="t-mono-s">LEARN MORE</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+                </div>
+              </div>
+              <div class="home-cards__box-wrap"><div class="home-cards__box"><div class="boxart" aria-hidden="true">
+            <div class="boxart__spine"></div>
+            <div class="boxart__face">
+              <img class="boxart__img" src="/assets/img/hero-1.jpg" alt="" width="568" height="785" loading="lazy" decoding="async">
+              <div class="boxart__shade"></div>
+              <svg class="boxart__logo" viewBox="0 0 65.91 24" fill="currentColor"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+              <div class="boxart__title">Producing<br>Essentials<sup>™</sup></div>
+              <div class="boxart__marks"><i></i><i></i><i></i><i></i></div>
+              <div class="boxart__fine">Video lessons · guides · community</div>
+            </div>
+          </div></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quiz padding" id="quiz" data-quiz data-quiz-results='{"nonfiction-foundations":{"slug":"nonfiction-foundations","title":"Nonfiction Foundations","cost":529,"line":"Learn the full loop: find a story, shoot it, cut it and put it in front of a real live audience."},"advanced-storytelling":{"slug":"advanced-storytelling","title":"Advanced Storytelling","cost":779,"line":"Go deeper into structure, voice and edit so your films can hold a room."},"make-and-sell":{"slug":"make-and-sell","title":"Make & Sell","cost":679,"line":"Everything you need to build a steady, profitable career behind a lens."},"the-final-cut":{"slug":"the-final-cut","title":"The Final Cut","cost":679,"line":"A practical guide to fast, clean and gripping documentary cuts."},"the-roving-eye":{"slug":"the-roving-eye","title":"The Roving Eye","cost":779,"line":"The craft of shooting vivid, honest pictures that carry a whole story."},"field-notes-pro":{"slug":"field-notes-pro","title":"Field Notes Pro","cost":779,"line":"Your route to becoming a trusted documentary cameraperson on set."},"producing-essentials":{"slug":"producing-essentials","title":"Producing Essentials","cost":679,"line":"From budget to delivery: fund, schedule and manage a documentary so that it lands on time and on budget."}}'>
+    <header class="quiz__header"><div class="t-m"><span style="display:block">Which course is right for you?</span></div></header>
+    <div class="quiz__buttons">
+      <button class="btn btn--orange quiz__toggle" type="button" aria-expanded="false" aria-controls="quiz-form" data-quiz-toggle><span class="t-mono-s">Take the Filmmaker Quiz</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+      <a class="btn btn--orange quiz__button" href="#pricing"><span class="t-mono-s">Pricing Options</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a>
+    </div>
+    <div class="quiz__form" id="quiz-form" data-quiz-form aria-hidden="true" inert><div class="quiz__form-clip"><div class="quiz__form-inner" data-quiz-body></div></div></div>
+    <div class="quiz__frame corners" data-quiz-frame>
+      <button class="quiz__media" type="button" data-watch data-poster="/assets/img/hero-3.jpg" data-title="Welcome to the Reel Truth Academy" aria-label="Watch this video">
+        <img src="/assets/img/hero-3.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async">
+        <span class="quiz__play" aria-hidden="true"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="27.5" stroke="rgba(255,255,255,.35)"/><path d="M23 19.5v17l14-8.5z" fill="#fff"/></svg></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="pricing padding" id="pricing">
+    <div class="pricing__cards">
+      <div class="pricing__card pricing__card--orange">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Individual Course</div></div>
+        <div><div class="pricing__info"><div class="pricing__price-text t-p">Starting at</div><div class="pricing__price-wrap"><div class="pricing__price t-l t-lb">$529</div></div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><ul class="pricing__rows"><li class="t-p"><span>Live Monthly Guest Sessions &amp; Q&amp;A</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>VIP Access To A Thriving Global Community Of Makers</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Personal Feedback On Every Rough Cut</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Lifetime Access To Every Lesson And Update</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--orange pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+      <div class="pricing__card">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Membership</div></div>
+        <div><div class="pricing__info"><div class="pricing__price-text t-p">Starting at</div><div class="pricing__price-wrap"><div class="pricing__price t-l t-lb">$95</div></div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><ul class="pricing__rows"><li class="t-p"><span>Live Monthly Guest Sessions &amp; Q&amp;A</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>VIP Access To A Thriving Global Community Of Makers</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Personal Feedback On Every Rough Cut</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Lifetime Access To Every Lesson And Update</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--border pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+      <div class="pricing__card">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Bundles</div></div>
+        <div><div class="pricing__info"><div class="pricing__percentage-text t-xs">UP TO</div><div class="pricing__percentage t-l t-lb">40% OFF</div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><picture class="img pricing__image"><img src="/assets/img/course-2.jpg" alt="" width="382" height="171" loading="lazy" decoding="async"></picture><ul class="pricing__rows"><li class="t-p"><span>Pick Any Combination Of Courses</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--border pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="icon-text padding" id="iconTextBlocks">
+    <header><h2 class="t-m"><span style="display:block"><span style="color:#FFA200">What’s included</span><br>when you join RTA</span></h2></header>
+    <div class="icon-text__image mediaParallax"><picture class="img"><img src="/assets/img/hero-1.jpg" alt="" width="1792" height="2240" loading="lazy" decoding="async"></picture></div>
+    <ol class="icon-text__list" data-icon-text>
+      <li class="icon-text__tab">
+        <button class="icon-text__button" type="button" aria-expanded="false" aria-controls="it-0">
+          <span class="icon-text__header"><span class="icon-text__icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffa200" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"><path d="M5 6h14v12H5z"/><path d="m10.5 9.5 4 2.5-4 2.5z" fill="currentColor"/></svg></span><span class="icon-text__title t-p">Guided, in-depth lessons</span></span>
+          <span class="icon-text__view t-mono-s"><span class="icon-text__view-text desktop">View Less</span><span class="icon-text__brackets t-mono-s"><span>[</span><svg fill="none" height="14" viewBox="0 0 8 14" width="8" aria-hidden="true"><g fill="#fff"><path d="m7.5 6v1h-7v-1z"/><path d="m3.5 3h1v7h-1z"/></g></svg><span>]</span></span></span>
+        </button>
+        <div class="icon-text__panel" id="it-0" aria-hidden="true" inert><div class="icon-text__tab-body"><div class="icon-text__body-wrap"><div class="icon-text__body t-sp"><p>Work through a full library of short, practical lessons, each one built around a real film, so you always know what to do next whether you are planning, shooting or editing.</p></div></div></div></div>
+      </li>
+      <li class="icon-text__tab">
+        <button class="icon-text__button" type="button" aria-expanded="false" aria-controls="it-1">
+          <span class="icon-text__header"><span class="icon-text__icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffa200" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"><circle cx="12" cy="12" r="7"/><path d="M12 8v4.2l3 1.8"/></svg></span><span class="icon-text__title t-p">Learn on your schedule</span></span>
+          <span class="icon-text__view t-mono-s"><span class="icon-text__view-text desktop">View Less</span><span class="icon-text__brackets t-mono-s"><span>[</span><svg fill="none" height="14" viewBox="0 0 8 14" width="8" aria-hidden="true"><g fill="#fff"><path d="m7.5 6v1h-7v-1z"/><path d="m3.5 3h1v7h-1z"/></g></svg><span>]</span></span></span>
+        </button>
+        <div class="icon-text__panel" id="it-1" aria-hidden="true" inert><div class="icon-text__tab-body"><div class="icon-text__body-wrap"><div class="icon-text__body t-sp"><p>Every lesson, worksheet and template is available whenever you want it, on any device. Pause for a month, come back, and pick up exactly where you left off with nothing expiring.</p></div></div></div></div>
+      </li>
+      <li class="icon-text__tab">
+        <button class="icon-text__button" type="button" aria-expanded="false" aria-controls="it-2">
+          <span class="icon-text__header"><span class="icon-text__icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffa200" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"><path d="M5 7h10v10H5z"/><path d="m15 11 4-2.5v7L15 13"/></svg></span><span class="icon-text__title t-p">Live monthly calls</span></span>
+          <span class="icon-text__view t-mono-s"><span class="icon-text__view-text desktop">View Less</span><span class="icon-text__brackets t-mono-s"><span>[</span><svg fill="none" height="14" viewBox="0 0 8 14" width="8" aria-hidden="true"><g fill="#fff"><path d="m7.5 6v1h-7v-1z"/><path d="m3.5 3h1v7h-1z"/></g></svg><span>]</span></span></span>
+        </button>
+        <div class="icon-text__panel" id="it-2" aria-hidden="true" inert><div class="icon-text__tab-body"><div class="icon-text__body-wrap"><div class="icon-text__body t-sp"><p>Once a month a working producer, editor or cinematographer joins a live session and takes your questions. Every call is recorded, so you can catch up if the time does not suit you.</p></div></div></div></div>
+      </li>
+      <li class="icon-text__tab">
+        <button class="icon-text__button" type="button" aria-expanded="false" aria-controls="it-3">
+          <span class="icon-text__header"><span class="icon-text__icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffa200" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"><circle cx="9" cy="9" r="2.4"/><circle cx="16" cy="10" r="2"/><path d="M4.5 17c.4-2.6 2.2-4 4.5-4s4.1 1.4 4.5 4M14 15.2c.6-.9 1.5-1.4 2.6-1.4 1.6 0 2.7.9 3 2.8"/></svg></span><span class="icon-text__title t-p">Interactive community</span></span>
+          <span class="icon-text__view t-mono-s"><span class="icon-text__view-text desktop">View Less</span><span class="icon-text__brackets t-mono-s"><span>[</span><svg fill="none" height="14" viewBox="0 0 8 14" width="8" aria-hidden="true"><g fill="#fff"><path d="m7.5 6v1h-7v-1z"/><path d="m3.5 3h1v7h-1z"/></g></svg><span>]</span></span></span>
+        </button>
+        <div class="icon-text__panel" id="it-3" aria-hidden="true" inert><div class="icon-text__tab-body"><div class="icon-text__body-wrap"><div class="icon-text__body t-sp"><p>A private group of makers at every level, where you can share a rough cut, ask for a second pair of eyes, find a collaborator or simply see how other people solve the same problems.</p></div></div></div></div>
+      </li>
+      <li class="icon-text__tab">
+        <button class="icon-text__button" type="button" aria-expanded="false" aria-controls="it-4">
+          <span class="icon-text__header"><span class="icon-text__icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffa200" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"><path d="M7 4.5h8l3 3V19.5H7z"/><path d="M10 11h5M10 14h5"/></svg></span><span class="icon-text__title t-p">Assignments and certificates</span></span>
+          <span class="icon-text__view t-mono-s"><span class="icon-text__view-text desktop">View Less</span><span class="icon-text__brackets t-mono-s"><span>[</span><svg fill="none" height="14" viewBox="0 0 8 14" width="8" aria-hidden="true"><g fill="#fff"><path d="m7.5 6v1h-7v-1z"/><path d="m3.5 3h1v7h-1z"/></g></svg><span>]</span></span></span>
+        </button>
+        <div class="icon-text__panel" id="it-4" aria-hidden="true" inert><div class="icon-text__tab-body"><div class="icon-text__body-wrap"><div class="icon-text__body t-sp"><p>Short practical assignments turn what you watch into footage you can use. Finish a course and its final project and you receive a certificate that you can share with anyone who asks.</p></div></div></div></div>
+      </li>
+      <li class="icon-text__tab">
+        <button class="icon-text__button" type="button" aria-expanded="false" aria-controls="it-5">
+          <span class="icon-text__header"><span class="icon-text__icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffa200" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"><path d="M5 6.5h14v9H12l-4 3v-3H5z"/></svg></span><span class="icon-text__title t-p">Personal coaching and rough-cut notes</span></span>
+          <span class="icon-text__view t-mono-s"><span class="icon-text__view-text desktop">View Less</span><span class="icon-text__brackets t-mono-s"><span>[</span><svg fill="none" height="14" viewBox="0 0 8 14" width="8" aria-hidden="true"><g fill="#fff"><path d="m7.5 6v1h-7v-1z"/><path d="m3.5 3h1v7h-1z"/></g></svg><span>]</span></span></span>
+        </button>
+        <div class="icon-text__panel" id="it-5" aria-hidden="true" inert><div class="icon-text__tab-body"><div class="icon-text__body-wrap"><div class="icon-text__body t-sp"><p>Send us a work in progress and get written notes from a working filmmaker, so the changes you make next are the ones that matter most to your film.</p></div></div></div></div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="cta-media">
+    <header class="cta-media__header">
+      <div class="cta-media__group">
+        <p class="cta-media__title t-xs">Teams our members work with</p>
+        <div class="cta-media__strip logo-marquee__slider" style="--n:16">
+          <div class="logo-marquee__track">
+            <div class="logo-marquee__slide"><div class="lg lg--caps" role="img" aria-label="Oriel Public Media"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg><span class="lg__t"><b>Oriel</b><i>Public Media</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--serif lg--s" role="img" aria-label="Harbor Light"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19a10 10 0 0 1 20 0z" fill="currentColor"/></svg><span class="lg__t"><b>Harbor Light</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps" role="img" aria-label="Meridian University"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 21.5 7v10L12 22.5 2.5 17V7z" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="lg__t"><b>Meridian</b><i>University</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--lower" role="img" aria-label="kestrel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 18 12 6l10 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg><span class="lg__t"><b>kestrel</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--mono lg--s" role="img" aria-label="Low Country Film Society"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><circle cx="4" cy="4" r="2"/><circle cx="12" cy="4" r="2"/><circle cx="20" cy="4" r="2"/><circle cx="4" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="20" cy="12" r="2"/><circle cx="4" cy="20" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="20" cy="20" r="2"/></g></svg><span class="lg__t"><b>Low Country</b><i>Film Society</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps" role="img" aria-label="Riverbend Church"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 22.5 12 12 22.5 1.5 12z" fill="currentColor"/></svg><span class="lg__t"><b>Riverbend</b><i>Church</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps lg--s" role="img" aria-label="Open Frame"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 22 22 2" stroke="currentColor" stroke-width="2"/></svg><span class="lg__t"><b>Open Frame</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--serif" role="img" aria-label="Stillwater"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12c3-6 5-6 8 0s5 6 8 0 4-5 6-2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span class="lg__t"><b>Stillwater</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--lower" role="img" aria-label="tidewell"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="3" y="12" width="4" height="10"/><rect x="10" y="6" width="4" height="16"/><rect x="17" y="1" width="4" height="21"/></g></svg><span class="lg__t"><b>tidewell</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps lg--s" role="img" aria-label="Summit Learning"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 22 21H2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="lg__t"><b>Summit</b><i>Learning</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--mono" role="img" aria-label="Nova-9 Broadcast"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="3"/></svg><span class="lg__t"><b>Nova-9</b><i>Broadcast</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--serif" role="img" aria-label="The Lantern Foundation"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg><span class="lg__t"><b>The Lantern</b><i>Foundation</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--lower lg--s" role="img" aria-label="oakline"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="2" y="4" width="20" height="3"/><rect x="2" y="10.5" width="14" height="3"/><rect x="2" y="17" width="8" height="3"/></g></svg><span class="lg__t"><b>oakline</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps" role="img" aria-label="Orbit Collective"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor"/><ellipse cx="12" cy="12" rx="11" ry="5" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(-30 12 12)"/></svg><span class="lg__t"><b>Orbit</b><i>Collective</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--serif" role="img" aria-label="Fernhill Academy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21C3 9 10 3 21 3c0 11-6 18-18 18z" fill="currentColor"/></svg><span class="lg__t"><b>Fernhill</b><i>Academy</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--mono lg--s" role="img" aria-label="Clear Sky Television"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v5M12 18v5M1 12h5M18 12h5M4.2 4.2l3.5 3.5M16.3 16.3l3.5 3.5M19.8 4.2l-3.5 3.5M7.7 16.3l-3.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="lg__t"><b>Clear Sky</b><i>Television</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg><span class="lg__t"><b>Oriel</b><i>Public Media</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--serif lg--s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19a10 10 0 0 1 20 0z" fill="currentColor"/></svg><span class="lg__t"><b>Harbor Light</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 21.5 7v10L12 22.5 2.5 17V7z" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="lg__t"><b>Meridian</b><i>University</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--lower" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 18 12 6l10 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg><span class="lg__t"><b>kestrel</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--mono lg--s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><circle cx="4" cy="4" r="2"/><circle cx="12" cy="4" r="2"/><circle cx="20" cy="4" r="2"/><circle cx="4" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="20" cy="12" r="2"/><circle cx="4" cy="20" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="20" cy="20" r="2"/></g></svg><span class="lg__t"><b>Low Country</b><i>Film Society</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 22.5 12 12 22.5 1.5 12z" fill="currentColor"/></svg><span class="lg__t"><b>Riverbend</b><i>Church</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps lg--s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 22 22 2" stroke="currentColor" stroke-width="2"/></svg><span class="lg__t"><b>Open Frame</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--serif" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12c3-6 5-6 8 0s5 6 8 0 4-5 6-2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span class="lg__t"><b>Stillwater</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--lower" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="3" y="12" width="4" height="10"/><rect x="10" y="6" width="4" height="16"/><rect x="17" y="1" width="4" height="21"/></g></svg><span class="lg__t"><b>tidewell</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps lg--s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 22 21H2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="lg__t"><b>Summit</b><i>Learning</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--mono" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="3"/></svg><span class="lg__t"><b>Nova-9</b><i>Broadcast</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--serif" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg><span class="lg__t"><b>The Lantern</b><i>Foundation</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--lower lg--s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="2" y="4" width="20" height="3"/><rect x="2" y="10.5" width="14" height="3"/><rect x="2" y="17" width="8" height="3"/></g></svg><span class="lg__t"><b>oakline</b></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--caps" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor"/><ellipse cx="12" cy="12" rx="11" ry="5" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(-30 12 12)"/></svg><span class="lg__t"><b>Orbit</b><i>Collective</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--serif" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21C3 9 10 3 21 3c0 11-6 18-18 18z" fill="currentColor"/></svg><span class="lg__t"><b>Fernhill</b><i>Academy</i></span></div></div>
+            <div class="logo-marquee__slide"><div class="lg lg--mono lg--s" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v5M12 18v5M1 12h5M18 12h5M4.2 4.2l3.5 3.5M16.3 16.3l3.5 3.5M19.8 4.2l-3.5 3.5M7.7 16.3l-3.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="lg__t"><b>Clear Sky</b><i>Television</i></span></div></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="cta-media__image mediaParallax"><picture class="img"><source media="(max-width: 480px)" srcset="/assets/img/hero-1.jpg" width="1000" height="1810"><img src="/assets/img/hero-4.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture></div>
+  </section>
+
+  <section class="testimonials padding">
+    <header><h2 class="t-m"><span style="display:block">A school and a community to grow your craft</span></h2></header>
+    <div class="testimonials__cards">
+      <div class="testimonials__card" data-card="0">
+        <div class="testimonials__avatar"><picture class="img"><img src="/assets/img/founder-2-sm.jpg" alt="" width="640" height="640" loading="lazy" decoding="async"></picture></div>
+        <div class="testimonials__heading t-xs">Mara’s story:</div>
+        <div class="testimonials__quote t-p"><div><p>“With RTA I went from barely any experience in the industry to working <em>FULL TIME</em> with a documentary production company, in under a year.”</p></div><span class="testimonials__author t-p">– Mara</span></div>
+      </div>
+      <div class="testimonials__card" data-card="1">
+        <div class="testimonials__avatar"><picture class="img"><img src="/assets/img/founder-1-sm.jpg" alt="" width="640" height="640" loading="lazy" decoding="async"></picture></div>
+        <div class="testimonials__heading t-xs">Idris’s story:</div>
+        <div class="testimonials__quote t-p"><div><p>“I went from videographer to <em>storyteller</em> and <em>filmmaker</em> with RTA. I’ve learned how to make more money and separate myself from other videographers.”</p></div><span class="testimonials__author t-p">– Idris</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing padding" id="pricing">
+    <header><h2 class="t-m"><span style="display:block">Everything you need to take a film from idea to screen</span></h2><div class="t-p"><p>Turn your passion for film into real work</p></div></header>
+    <div class="pricing__cards">
+      <div class="pricing__card pricing__card--orange">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Individual Course</div></div>
+        <div><div class="pricing__info"><div class="pricing__price-text t-p">Starting at</div><div class="pricing__price-wrap"><div class="pricing__price t-l t-lb">$529</div></div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><ul class="pricing__rows"><li class="t-p"><span>Live Monthly Guest Sessions &amp; Q&amp;A</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>VIP Access To A Thriving Global Community Of Makers</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Personal Feedback On Every Rough Cut</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Lifetime Access To Every Lesson And Update</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--orange pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+      <div class="pricing__card">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Membership</div></div>
+        <div><div class="pricing__info"><div class="pricing__price-text t-p">Starting at</div><div class="pricing__price-wrap"><div class="pricing__price t-l t-lb">$95</div></div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><ul class="pricing__rows"><li class="t-p"><span>Live Monthly Guest Sessions &amp; Q&amp;A</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>VIP Access To A Thriving Global Community Of Makers</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Personal Feedback On Every Rough Cut</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Lifetime Access To Every Lesson And Update</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--border pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+      <div class="pricing__card">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Bundles</div></div>
+        <div><div class="pricing__info"><div class="pricing__percentage-text t-xs">UP TO</div><div class="pricing__percentage t-l t-lb">40% OFF</div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><picture class="img pricing__image"><img src="/assets/img/course-2.jpg" alt="" width="382" height="171" loading="lazy" decoding="async"></picture><ul class="pricing__rows"><li class="t-p"><span>Pick Any Combination Of Courses</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--border pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-slider">
+    <header><h2 class="t-mono orange" aria-hidden="true"></h2><h3 class="t-m">Our members’ success speaks for itself</h3></header>
+    <div class="video-slider__stage">
+      <div class="video-slider__names t-mono-s" aria-live="polite"><div class="video-slider__name is-active">Amara</div><div class="video-slider__name">Leo</div><div class="video-slider__name">Priya</div><div class="video-slider__name">Marcus</div><div class="video-slider__name">Sofia</div></div>
+      <div class="video-slider__wrap">
+        <div class="video-slider__viewport"><div class="video-slider__track">
+          <div class="video-slider__slide"><button class="video-slider__video is-active" type="button" aria-label="Play the story from Amara"><picture class="img"><img src="/assets/img/hero-2.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture><span class="video-slider__play"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="28" r="27.5" stroke="#fff"/><path d="M38.5 27.134c.667.385.667 1.347 0 1.732l-14.5 8.37c-.667.385-1.5-.096-1.5-.866V19.63c0-.77.833-1.25 1.5-.866z" fill="#fff"/></svg></span></button></div>
+          <div class="video-slider__slide"><button class="video-slider__video" type="button" aria-label="Play the story from Leo"><picture class="img"><img src="/assets/img/hero-4.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture><span class="video-slider__play"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="28" r="27.5" stroke="#fff"/><path d="M38.5 27.134c.667.385.667 1.347 0 1.732l-14.5 8.37c-.667.385-1.5-.096-1.5-.866V19.63c0-.77.833-1.25 1.5-.866z" fill="#fff"/></svg></span></button></div>
+          <div class="video-slider__slide"><button class="video-slider__video" type="button" aria-label="Play the story from Priya"><picture class="img"><img src="/assets/img/hero-6.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture><span class="video-slider__play"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="28" r="27.5" stroke="#fff"/><path d="M38.5 27.134c.667.385.667 1.347 0 1.732l-14.5 8.37c-.667.385-1.5-.096-1.5-.866V19.63c0-.77.833-1.25 1.5-.866z" fill="#fff"/></svg></span></button></div>
+          <div class="video-slider__slide"><button class="video-slider__video" type="button" aria-label="Play the story from Marcus"><picture class="img"><img src="/assets/img/founder-2-lg.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture><span class="video-slider__play"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="28" r="27.5" stroke="#fff"/><path d="M38.5 27.134c.667.385.667 1.347 0 1.732l-14.5 8.37c-.667.385-1.5-.096-1.5-.866V19.63c0-.77.833-1.25 1.5-.866z" fill="#fff"/></svg></span></button></div>
+          <div class="video-slider__slide"><button class="video-slider__video" type="button" aria-label="Play the story from Sofia"><picture class="img"><img src="/assets/img/course-2.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture><span class="video-slider__play"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="28" r="27.5" stroke="#fff"/><path d="M38.5 27.134c.667.385.667 1.347 0 1.732l-14.5 8.37c-.667.385-1.5-.096-1.5-.866V19.63c0-.77.833-1.25 1.5-.866z" fill="#fff"/></svg></span></button></div>
+        </div></div>
+        <div class="video-slider__frame" aria-hidden="true"><div class="corners"></div></div>
+      </div>
+      <div class="video-slider__ruler" aria-hidden="true"><div class="video-slider__ticks"><span>|</span><span class="is-active">01</span><span>|</span><span>02</span><span>|</span><span>03</span><span>|</span><span>04</span><span>|</span><span>05</span><span>|</span></div></div>
+    </div>
+  </section>
+
+  <section class="compare padding">
+    <div class="compare__columns">
+      <div class="compare__column">
+        <div class="compare__heading t-xs" aria-hidden="true"></div>
+        <ul class="compare__rows"><li class="compare__row t-p"><span>Lifetime access to lessons</span></li><li class="compare__row t-p"><span>Monthly curriculum updates</span></li><li class="compare__row t-p"><span>On-demand video library you keep</span></li><li class="compare__row t-p"><span>Learn at your own pace</span></li><li class="compare__row t-p"><span>Direct access to industry guests</span></li><li class="compare__row t-p"><span>Contests and awards</span></li><li class="compare__row t-p"><span>Live feedback sessions</span></li><li class="compare__row t-p"><span>Lifetime community and network</span></li><li class="compare__row t-p"><span>Funding for member meet-ups</span></li><li class="compare__row t-p"><span>Festival, funding and distribution support</span></li></ul>
+      </div>
+      <div class="compare__column compare__column--ours">
+        <div class="compare__heading t-xs"><svg class="compare__logo" viewBox="0 0 66 24" aria-label="RTA" role="img"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z" fill="#fff"/></svg></div>
+        <ul class="compare__rows"><li class="compare__row t-p"><span class="mobile">Lifetime access to lessons</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Monthly curriculum updates</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">On-demand video library you keep</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Learn at your own pace</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Direct access to industry guests</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Contests and awards</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Live feedback sessions</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Lifetime community and network</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Funding for member meet-ups</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Festival, funding and distribution support</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul>
+      </div>
+      <div class="compare__column compare__column--other">
+        <div class="compare__heading t-xs">Film School</div>
+        <ul class="compare__rows"><li class="compare__row t-p"><span class="mobile">Lifetime access to lessons</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Monthly curriculum updates</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">On-demand video library you keep</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Learn at your own pace</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Direct access to industry guests</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Contests and awards</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Live feedback sessions</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Lifetime community and network</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Funding for member meet-ups</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Festival, funding and distribution support</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li></ul>
+      </div>
+      <div class="compare__column compare__column--other">
+        <div class="compare__heading t-xs">Other Courses</div>
+        <ul class="compare__rows"><li class="compare__row t-p"><span class="mobile">Lifetime access to lessons</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Monthly curriculum updates</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">On-demand video library you keep</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Learn at your own pace</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Included" role="img"><path d="m6 12.5 4 4 8-9" stroke="#ffa200" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Direct access to industry guests</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Contests and awards</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Live feedback sessions</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Lifetime community and network</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Funding for member meet-ups</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li><li class="compare__row t-p"><span class="mobile">Festival, funding and distribution support</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Not included" role="img"><path d="m7.5 7.5 9 9m0-9-9 9" stroke="#505050" stroke-width="1.3" stroke-linecap="round"/></svg></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="film-grid padding" data-film-grid>
+    <header>
+      
+      <h3 class="t-m"><span style="display:block">Our members’ films are winning awards and securing distribution deals</span></h3>
+    </header>
+    <div class="film-grid__grid" style="--limit:3">
+      <button class="film-grid__card" type="button" data-title="Low Tides - Nora Quill" data-poster="/assets/img/film-1.jpg" data-award="Audience Choice, Autumn Showcase">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-1.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-1.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 01 ]</div>
+          <div class="t-xsp"><h4>Low Tides - Nora Quill</h4><div>Documentary</div></div>
+        </div>
+      </button>
+      <button class="film-grid__card" type="button" data-title="Paper Boats - Ivo Castellan" data-poster="/assets/img/film-2.jpg">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-2.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-2.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 02 ]</div>
+          <div class="t-xsp"><h4>Paper Boats - Ivo Castellan</h4><div>Documentary</div></div>
+        </div>
+      </button>
+      <button class="film-grid__card" type="button" data-title="Hush - Dana Whitlow" data-poster="/assets/img/film-3.jpg">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-3.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-3.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 03 ]</div>
+          <div class="t-xsp"><h4>Hush - Dana Whitlow</h4><div>Documentary</div></div>
+        </div>
+      </button>
+      <button class="film-grid__card" type="button" data-title="The Salt Road North - Priya Valdane" data-poster="/assets/img/film-4.jpg">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-4.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-4.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 04 ]</div>
+          <div class="t-xsp"><h4>The Salt Road North - Priya Valdane</h4><div>Documentary</div></div>
+        </div>
+      </button>
+      <button class="film-grid__card" type="button" data-title="Morning Rush - Rae Fontaine" data-poster="/assets/img/film-5.jpg">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-5.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-5.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 05 ]</div>
+          <div class="t-xsp"><h4>Morning Rush - Rae Fontaine</h4><div>Commercial</div></div>
+        </div>
+      </button>
+      <button class="film-grid__card" type="button" data-title="Where Rivers Begin - Eun Ji" data-poster="/assets/img/film-6.jpg">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-6.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-6.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 06 ]</div>
+          <div class="t-xsp"><h4>Where Rivers Begin - Eun Ji</h4><div>Documentary</div></div>
+        </div>
+      </button>
+      <button class="film-grid__card" type="button" data-title="Small Town Signal - Marcus Delacour" data-poster="/assets/img/film-7.jpg">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-7.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-7.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 07 ]</div>
+          <div class="t-xsp"><h4>Small Town Signal - Marcus Delacour</h4><div>Campaign</div></div>
+        </div>
+      </button>
+      <button class="film-grid__card" type="button" data-title="Daylight - Camille Okafor" data-poster="/assets/img/film-8.jpg">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-8.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-8.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 08 ]</div>
+          <div class="t-xsp"><h4>Daylight - Camille Okafor</h4><div>Reel</div></div>
+        </div>
+      </button>
+      <button class="film-grid__card" type="button" data-title="Kindle - Jules Brandt" data-poster="/assets/img/film-9.jpg">
+        <div class="film-grid__visuals">
+          <div class="film-grid__video-wrap" aria-hidden="true"><div class="film-grid__video"><img class="film-grid__preview" src="/assets/img/film-9.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></div></div>
+          <picture class="img film-grid__image"><img src="/assets/img/film-9.jpg" alt="" width="1792" height="1008" loading="lazy" decoding="async"></picture>
+        </div>
+        <div class="film-grid__info">
+          <div class="film-grid__index t-mono-s">[ 09 ]</div>
+          <div class="t-xsp"><h4>Kindle - Jules Brandt</h4><div>Commercial</div></div>
+        </div>
+      </button>
+    </div>
+    <button class="btn btn--border film-grid__button" type="button"><span class="t-mono-s">Load More</span></button>
+  </section>
+
+  <section class="pricing padding" id="pricing">
+    <header><h2 class="t-m"><span style="display:block">Everything you need to take a film from first idea to finished screening and beyond</span></h2><div class="t-p"><p>Turn your passion for film into real work</p></div></header>
+    <div class="pricing__cards">
+      <div class="pricing__card pricing__card--orange">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Individual Course</div></div>
+        <div><div class="pricing__info"><div class="pricing__price-text t-p">Starting at</div><div class="pricing__price-wrap"><div class="pricing__price t-l t-lb">$529</div></div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Choose Individual Courses</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><ul class="pricing__rows"><li class="t-p"><span>Live Monthly Guest Sessions &amp; Q&amp;A</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>VIP Access To A Thriving Global Community Of Makers</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Personal Feedback On Every Rough Cut</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Lifetime Access To Every Lesson And Update</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--orange pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+      <div class="pricing__card">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Membership</div></div>
+        <div><div class="pricing__info"><div class="pricing__price-text t-p">Starting at</div><div class="pricing__price-wrap"><div class="pricing__price t-l t-lb">$95</div></div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save On Courses With Membership</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><ul class="pricing__rows"><li class="t-p"><span>Live Monthly Guest Sessions &amp; Q&amp;A</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>VIP Access To A Thriving Global Community Of Makers</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Personal Feedback On Every Rough Cut</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="t-p"><span>Lifetime Access To Every Lesson And Update</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--border pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+      <div class="pricing__card">
+        <div class="pricing__tag-wrap"><div class="pricing__tag t-p">Bundles</div></div>
+        <div><div class="pricing__info"><div class="pricing__percentage-text t-xs">UP TO</div><div class="pricing__percentage t-l t-lb">40% OFF</div></div></div>
+        <div class="pricing__strip"><div class="pricing__strip-track"><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Bundle &amp; Save</span><span class="t-p">•</span></div></div><div class="pricing__strip-slide"><div class="pricing__save"><span class="t-p">Save 40%</span><span class="t-p">•</span></div></div></div></div>
+        <div class="pricing__bottom"><picture class="img pricing__image"><img src="/assets/img/course-2.jpg" alt="" width="382" height="171" loading="lazy" decoding="async"></picture><ul class="pricing__rows"><li class="t-p"><span>Pick Any Combination Of Courses</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m13.667 4-7.334 7.333L3 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></li></ul><a class="btn btn--border pricing__button" href="/courses"><span class="t-mono-s">Get Started</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer padding">
+  <div class="footer__grid">
+    <div class="footer__inner">
+      <a class="footer__logo" href="/" aria-label="Reel Truth Academy homepage">
+        <svg width="66" height="24" viewBox="0 0 65.91 24" fill="none" aria-hidden="true"><path d="M10.47 12.05L5.63 12.05L5.63 11.69L10.25 11.69Q11.75 11.69 12.79 11.09Q13.82 10.49 14.36 9.31Q14.90 8.14 14.90 6.39L14.90 6.39Q14.90 4.64 14.36 3.46Q13.82 2.28 12.79 1.67Q11.75 1.06 10.25 1.06L10.25 1.06L0 1.06L0 0.45L10.47 0.45Q12.89 0.45 14.70 1.09Q16.52 1.73 17.52 3.05Q18.53 4.36 18.53 6.39L18.53 6.39Q18.53 8.42 17.59 9.66Q16.64 10.91 14.84 11.48Q13.04 12.05 10.47 12.05L10.47 12.05ZM10.19 23.83L0 23.83L0 23.22L10.19 23.22L10.19 23.83ZM6.84 23.50L3.35 23.50L3.35 0.84L6.84 0.84L6.84 23.50ZM18.11 24L18.11 24Q16.69 24 15.89 23.51Q15.09 23.02 14.72 22.18Q14.35 21.35 14.26 20.31Q14.17 19.26 14.15 18.16Q14.14 17.05 14.03 16.01Q13.93 14.96 13.57 14.13Q13.20 13.29 12.39 12.79Q11.58 12.30 10.15 12.30L10.15 12.30L5.63 12.30L5.63 11.97L11.28 11.97Q13.50 11.97 14.80 12.58Q16.10 13.18 16.75 14.20Q17.41 15.21 17.63 16.42Q17.86 17.63 17.88 18.83Q17.89 20.03 17.95 21.04Q18 22.05 18.29 22.66Q18.58 23.27 19.37 23.27L19.37 23.27Q19.87 23.27 20.26 23.17Q20.65 23.06 20.96 22.91L20.96 22.91L21.18 23.49Q20.81 23.69 19.98 23.84Q19.15 24 18.11 24ZM37.37 23.83L27.02 23.83L27.02 23.22L30.45 23.22L30.45 1.06L27.68 1.06Q26.35 1.06 25.48 1.53Q24.61 1.99 24.11 2.85Q23.61 3.71 23.38 4.91Q23.16 6.11 23.11 7.59L23.11 7.59L22.47 7.59L22.47 0.45L41.92 0.45L41.92 7.59L41.31 7.59Q41.27 6.11 41.03 4.91Q40.80 3.71 40.29 2.85Q39.79 1.99 38.92 1.53Q38.06 1.06 36.72 1.06L36.72 1.06L33.94 1.06L33.94 23.22L37.37 23.22L37.37 23.83ZM59.06 16.54L49.11 16.54L49.11 15.93L59.06 15.93L59.06 16.54ZM54.41 0L55.43 0L63.48 23.22L65.91 23.22L65.91 23.83L56.38 23.83L56.38 23.22L59.45 23.22L53.44 4.60L46.94 23.22L50.24 23.22L50.24 23.83L43.37 23.83L43.37 23.22L46.24 23.22L54.41 0Z"/></svg>
+      </a>
+      <div class="footer__heading t-xs">Join the RTA community now</div>
+      <div class="footer__button-wrap">
+        <button class="btn btn--orange" type="button" data-open-subscribe><span class="t-mono-s">Join our email list</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+        <div class="t-mono-s" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="footer__list footer__links-left t-mono-s">
+      <div class="footer__list-heading orange">Pages</div>
+      <ul>
+        <li><a class="t-link t-no-mobile-line" href="/">Home</a></li>
+        <li><a class="t-link t-no-mobile-line" href="/courses">Courses</a></li>
+        <li><a class="t-link t-no-mobile-line" href="/certification">Certification</a></li>
+        <li><a class="t-link t-no-mobile-line" href="/funding">Funding</a></li>
+        <li><a class="t-link t-no-mobile-line" href="/short-documentary-competition">Competition</a></li>
+        <li><a class="t-link t-no-mobile-line" href="/enterprise">Enterprise</a></li>
+        <li><a class="t-link t-no-mobile-line" href="/about">About</a></li>
+        <li><a class="t-link t-no-mobile-line" href="/frequently-asked-questions">FAQ</a></li>
+        <li><a class="t-link t-no-mobile-line" href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__links-right">
+      <div class="footer__list t-mono-s">
+        <div class="footer__list-heading orange">Courses</div>
+        <ul>
+          <li><a class="t-link t-no-mobile-line" href="/courses/nonfiction-foundations">Nonfiction Foundations</a></li>
+          <li><a class="t-link t-no-mobile-line" href="/courses/advanced-storytelling">Advanced Storytelling</a></li>
+          <li><a class="t-link t-no-mobile-line" href="/courses/make-and-sell">Make &amp; Sell</a></li>
+          <li><a class="t-link t-no-mobile-line" href="/courses/the-final-cut">The Final Cut</a></li>
+          <li><a class="t-link t-no-mobile-line" href="/courses/the-roving-eye">The Roving Eye</a></li>
+          <li><a class="t-link t-no-mobile-line" href="/courses/field-notes-pro">Field Notes Pro</a></li>
+          <li><a class="t-link t-no-mobile-line" href="/courses/producing-essentials">Producing Essentials</a></li>
+        </ul>
+      </div>
+      <div class="footer__list t-mono-s">
+        <div class="footer__list-heading orange">Socials</div>
+        <ul>
+          <li><a class="footer__social-link social-link t-link t-social" href="https://www.youtube.com/" target="_blank" rel="noopener"><span>YouTube</span><div><div>[</div><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><g><path d="M9.17163 1.17139H14.8285M14.8285 1.17139V6.82825M14.8285 1.17139L9.17163 6.82825" stroke="#fff" stroke-linejoin="round"/><path d="M1.17163 9.17139H6.82848M6.82848 9.17139V14.8282M6.82848 9.17139L1.17163 14.8282" stroke="#fff" stroke-linejoin="round"/></g></svg><div>]</div></div></a></li>
+          <li><a class="footer__social-link social-link t-link t-social" href="https://www.instagram.com/" target="_blank" rel="noopener"><span>Instagram</span><div><div>[</div><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><g><path d="M9.17163 1.17139H14.8285M14.8285 1.17139V6.82825M14.8285 1.17139L9.17163 6.82825" stroke="#fff" stroke-linejoin="round"/><path d="M1.17163 9.17139H6.82848M6.82848 9.17139V14.8282M6.82848 9.17139L1.17163 14.8282" stroke="#fff" stroke-linejoin="round"/></g></svg><div>]</div></div></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__meta t-mono-s">
+    <span class="footer__copyright">© 2020-2026 Reel Truth Academy</span>
+    <a class="t-link" href="https://github.com/NSR-Media-Cloud/documentary-about-replica" target="_blank" rel="noopener">Built as a design study</a>
+    <ul class="footer__legals">
+        <li><a class="t-link" href="/legals/privacy-policy"><span>Privacy Policy</span></a></li>
+        <li><a class="t-link" href="/legals/terms-of-use"><span>Terms of Use</span></a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie notice" hidden>
+  <div class="cookie__banner-view">
+    <div class="cookie__description t-sp">This website uses cookies.</div>
+    <div class="cookie__buttons t-mono-s">
+      <div class="cookie__buttons-left">
+        <button type="button" class="cookie__link cookie__manage-btn" data-cookie="manage">Manage</button>
+        <button type="button" class="cookie__accept" data-cookie="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+  <div class="cookie__manage-view" hidden>
+    <h2 class="t-xs cookie__heading">Manage Cookies</h2>
+    <p class="t-sp cookie__paragraph">We use cookies in order to improve your site experience and deliver personalised content. By continuing to use this site, you agree to our terms.</p>
+    <div class="cookie__manage-inner">
+      <div class="t-mono cookie__options-heading">Options</div>
+      <div class="cookie__cookie">
+        <div class="cookie__cookie-head t-mono-s"><span>Required</span><span class="cookie__always">Always active</span></div>
+        <p class="t-sp">These cookies are essential for the basic functioning of our website. They enable you to navigate through the site and use its features. Without these cookies, certain services you request may not be possible.</p>
+      </div>
+      <div class="cookie__cookie">
+        <div class="cookie__cookie-head t-mono-s"><span>Analytics</span><input class="cookie__toggle" id="cookie-analytics" type="checkbox" checked aria-label="Analytics cookies"></div>
+        <p class="t-sp">These analytical cookies gather data on website usage, helping us improve performance and user experience by tracking page visits and identifying issues. This information is anonymous and aggregated.</p>
+      </div>
+    </div>
+    <div class="cookie__buttons cookie__buttons--manage t-mono-s">
+      <button type="button" class="cookie__link cookie__manage-btn" data-cookie="save">Save options</button>
+      <button type="button" class="cookie__accept" data-cookie="accept-all">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SUBSCRIBE POPUP (scroll-triggered + Join buttons) ============ -->
+<div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" hidden>
+  <div class="popup__overlay"></div>
+  <div class="popup__container">
+    <div class="popup__wrap" tabindex="-1">
+      <div class="popup__close-btn"><button class="btn btn--light popup__close" type="button" data-popup-close><span class="t-mono-s">Close</span></button></div>
+      <div class="popup__content">
+        <form class="popup__form t-p" novalidate>
+          <p class="popup__eyebrow t-xsp">Waitlist</p>
+          <h2 class="popup__title t-s" id="popup-title">Get <span class="orange">early access</span> to our spring intake.</h2>
+          <p class="popup__body t-p orange">Join the waitlist and be first to hear when the doors open.</p>
+          <div class="popup__form-wrap">
+            <div class="popup__names">
+              <label class="field"><span class="field__label">First Name</span><input class="field__input" id="fn" name="firstName" type="text" autocomplete="given-name" required></label>
+              <label class="field"><span class="field__label">Last Name</span><input class="field__input" id="ln" name="lastName" type="text" autocomplete="family-name" required></label>
+            </div>
+            <label class="field"><span class="field__label">Email Address</span><input class="field__input" id="em" name="email" type="email" autocomplete="email" required></label>
+            <label class="field field--phone"><span class="field__cc" aria-hidden="true"><i class="field__flag"></i><span>· +1</span></span><span class="field__label">Phone Number (Optional)</span><input class="field__input" id="ph" name="phone" type="tel" autocomplete="tel"></label>
+            <div class="popup__submit">
+              <button class="btn btn--orange-dark" type="submit"><span class="t-mono-s">Subscribe</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#000"/></svg></button>
+              <p class="popup__error t-sp" role="alert" hidden>There were some errors in your submission.<br>Please check the highlighted fields.</p>
+            </div>
+            <div class="popup__success t-p" hidden>
+              <div>Thank you for joining the Reel Truth community!<br>We'll be in touch soon.</div>
+              <button class="btn btn--dark" type="button" data-popup-reset><span class="t-mono-s">Reset form</span><svg class="btn__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none" aria-hidden="true"><path d="m4 1 4 4m0 0-4 4m4-4h-8" stroke="#fff"/></svg></button>
+            </div>
+          </div>
+        </form>
+        <div class="popup__image" aria-hidden="true">
+          <div class="popup__boxes">
+            <picture class="img popup__box popup__box--1"><img src="/assets/img/course-1.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture>
+            <picture class="img popup__box popup__box--2"><img src="/assets/img/course-2.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture>
+            <picture class="img popup__box popup__box--3"><img src="/assets/img/course-3.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture>
+            <picture class="img popup__box popup__box--4"><img src="/assets/img/course-4.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture>
+            <picture class="img popup__box popup__box--5"><img src="/assets/img/course-5.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture>
+            <picture class="img popup__box popup__box--6"><img src="/assets/img/course-6.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture>
+            <picture class="img popup__box popup__box--7"><img src="/assets/img/course-7.jpg" alt="" width="660" height="920" loading="lazy" decoding="async"></picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal"></div>
+
+<div class="transition" id="transition" aria-hidden="true">
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__col"></div>
+  <div class="transition__corners-wrap"><div class="transition__corners corners"></div></div>
+  <div class="transition__wipe"></div>
+</div>
+
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/CustomEase.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

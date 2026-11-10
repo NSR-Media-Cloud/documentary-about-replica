@@ -1,0 +1,36 @@
+/* "Why join" cards: three tall photo cards; the title sits at the bottom and rises on hover to reveal the text.
+   On phones the cards become a swipeable row with a progress line. */
+.tmc { display: flex; flex-direction: column; align-items: center; gap: 80rem; padding-top: 110rem; padding-bottom: 24rem; }
+.tmc header { width: 920rem; text-align: center; }
+.tmc__cards { display: flex; flex-direction: column; align-items: center; gap: 88rem; width: 100%; }
+.tmc__viewport { width: 100%; }
+.tmc__track { display: flex; gap: 24rem; width: 100%; }
+.tmc__slide { position: relative; width: 448rem; height: 511rem; overflow: clip; flex: 0 0 auto; }
+.tmc__card { position: relative; height: 100%; }
+.tmc__media { position: absolute; inset: 0; }
+.tmc__media .img { position: absolute; inset: 0; height: 100%; }
+.tmc__media img { width: 100%; height: 100%; object-fit: cover; }
+.tmc__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, .8) 72%); z-index: 1; }
+.tmc__info {
+  position: absolute; bottom: 32rem; left: 24rem; right: 24rem; text-align: center; z-index: 2;
+  transform: translate3d(0, var(--rise, 0px), 0); transition: transform .6s var(--ease-out);
+}
+.tmc__body { position: absolute; left: 0; right: 0; padding-top: 16rem; opacity: 0; transition: opacity .5s var(--ease-out); }
+.tmc__slide.is-hover .tmc__body { opacity: 1; }
+.tmc__progress { display: none; }
+
+@media screen and (max-width: 480px) {
+  .tmc { align-items: flex-start; gap: 60rem; padding-top: 60rem; padding-bottom: 60rem; }
+  .tmc header { width: 100%; padding: 0 12rem; text-align: center; }
+  .tmc__cards { width: 100%; gap: 28rem; }
+  .tmc__viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .tmc__viewport::-webkit-scrollbar { display: none; }
+  .tmc__viewport { scroll-padding-left: 0; }
+  .tmc__track { gap: 0; width: max-content; padding: 0 12rem 0 0; }
+  .tmc__slide { width: 339rem; height: 408rem; scroll-snap-align: start; }
+  .tmc__card { margin-left: 12rem; pointer-events: none; }
+  .tmc__info { transform: translateZ(0); }
+  .tmc__body { position: relative; padding-top: 12rem; opacity: 1; }
+  .tmc__progress { display: block; position: relative; overflow: clip; width: 100%; height: 1rem; background: #232323; margin: 0 12rem; width: calc(100% - 24rem); }
+  .tmc__progress::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff; transform-origin: left; transform: translateZ(0) scaleX(var(--scale, 0)); }
+}

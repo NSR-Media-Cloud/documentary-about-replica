@@ -1,0 +1,17 @@
+/* Hero "text + image": centred tag / heading / link in an 80svh stage, then a full-width photo that drifts on scroll */
+.text-image { width: 100%; text-align: center; }
+.text-image__inner {
+  position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 24rem;
+  width: 684rem; height: 80vh; height: 80svh; margin: 0 auto;
+}
+.text-image span { display: block; }
+.text-image__link-wrap { overflow: clip; }
+.text-image__scroll { position: absolute; bottom: 24rem; margin: 0 auto; overflow: clip; }
+.text-image__image { overflow: clip; aspect-ratio: 16 / 9; }
+.text-image__image img { height: 100%; object-fit: cover; will-change: transform; }
+
+@media screen and (max-width: 480px) {
+  .text-image__inner { width: 100%; padding: 0 12rem; }
+  .text-image__heading a, .text-image__link-wrap a { line-break: anywhere; }
+  .text-image__image { aspect-ratio: 1500 / 2160; }
+}

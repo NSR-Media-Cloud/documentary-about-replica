@@ -1,0 +1,207 @@
+/* ==========================================================================
+   base.css — fonts, root scale, reset, helpers
+   Design tokens are taken from the audited source site:
+   - 1rem == 1/1440 of the viewport width (1/375 on phones), so every
+     dimension in this project scales linearly with the viewport.
+   ========================================================================== */
+
+/* ---- Fonts ------------------------------------------------------------
+   Open-licence stand-ins for the source's commercial grotesk + mono pair.
+   `size-adjust` rescales each face so cap-height, x-height and advance
+   widths land within ~1-2% of the originals (measured with canvas).      */
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../assets/fonts/InstrumentSans-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 87.5%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("../assets/fonts/InstrumentSans-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 87.5%;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Fragment Mono";
+  src: url("../assets/fonts/FragmentMono-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 92%;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fragment Mono";
+  src: url("../assets/fonts/FragmentMono-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 92%;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ---- Tokens ---------------------------------------------------------- */
+:root {
+  --dw: 1440;                 /* design width (px) the rem scale is built on */
+  --c-black: #000;
+  --c-page: #121212;
+  --c-white: #fff;
+  --c-orange: #ffa200;        /* the one accent */
+  --c-dim: #333;              /* un-revealed scroll text */
+  --c-line: #232323;
+  --font-sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Fragment Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  /* tracking corrections for the stand-in faces (see audit §3.2) */
+  --sans-fix: -0.004em;
+  --mono-fix: 0.045em;
+  --ease-out: cubic-bezier(.25, 1, .5, 1);   /* "quartOut" — the site's default ease */
+}
+@media screen and (max-width: 480px) {
+  :root { --dw: 375; }
+}
+
+html {
+  font-size: calc(100vw / var(--dw));
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@media screen and (max-width: 480px) {
+  html { overflow: visible; }
+}
+
+::selection { background: #ccc4b9; }
+
+/* ---- Reset ----------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+h1, h2, h3, h4, h5, h6, p { overflow-wrap: break-word; font-size: inherit; font-weight: inherit; margin: 0; }
+a, body, button, div, footer, form, h1, h2, h3, h4, h5, h6, header, html, img, input, label, li, nav, ol, p, select, span, table, textarea, ul { margin: 0; padding: 0; border: 0; }
+footer, header, main, menu, nav, section { display: block; }
+button, input, select, textarea {
+  display: block; box-sizing: border-box; border-radius: 0; outline: 0; margin: 0;
+  background: none; color: inherit; font-family: inherit; font-size: inherit; line-height: inherit;
+  text-transform: inherit; text-align: left; resize: none;
+}
+button { position: relative; pointer-events: all; -webkit-appearance: none; appearance: none; overflow: visible; background-color: transparent; cursor: pointer; }
+button[disabled] { cursor: default; }
+strong { display: inline-block; }
+li, ol, ul { list-style: none; display: flex; flex-direction: column; }
+a { color: inherit; text-decoration: none; display: inline-block; position: relative; }
+img, picture, svg { display: block; -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }
+img { height: auto; width: 100%; }
+address { font-style: normal; }
+blockquote, figure { margin: 0; }
+[hidden] { display: none !important; }
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1;
+  font-weight: 400;
+  background: var(--c-page);
+  color: var(--c-white);
+  overscroll-behavior: none;
+}
+main { position: relative; z-index: 1; background: var(--c-black); }
+
+/* Hidden scrollbars (the source hides them everywhere) */
+::-webkit-scrollbar { width: 0; height: 0; }
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track { background: transparent; }
+* { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* ---- Lenis smooth scroll --------------------------------------------- */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* ---- Split-text helpers ---------------------------------------------- */
+.line, .split { position: relative; }
+.line { display: block; }
+.word { white-space: pre; }
+.char, .word { position: relative; display: inline-block; }
+.line > .wrap, .split > .wrap { position: relative; overflow: hidden; }
+.line > .wrap { display: inline; }
+
+/* ---- Utilities -------------------------------------------------------- */
+.padding { padding-left: 24rem; padding-right: 24rem; }
+.orange { color: var(--c-orange); }
+.desktop { display: initial; }
+.mobile { display: none; }
+@media screen and (max-width: 480px) {
+  .padding { padding-left: 12rem; padding-right: 12rem; }
+  .desktop { display: none; }
+  .mobile { display: initial; }
+}
+
+/* 8-gradient bracket corners (small founder portrait) */
+.corners {
+  background:
+    linear-gradient(90deg, #fff 1rem, transparent 0) 0 0,
+    linear-gradient(90deg, #fff 1rem, transparent 0) 0 100%,
+    linear-gradient(270deg, #fff 1rem, transparent 0) 100% 0,
+    linear-gradient(270deg, #fff 1rem, transparent 0) 100% 100%,
+    linear-gradient(180deg, #fff 1rem, transparent 0) 0 0,
+    linear-gradient(180deg, #fff 1rem, transparent 0) 100% 0,
+    linear-gradient(0deg, #fff 1rem, transparent 0) 0 100%,
+    linear-gradient(0deg, #fff 1rem, transparent 0) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 12rem 12rem;
+}
+.corners--s { background-size: 8rem 8rem; }
+
+/* ---- Entrance animation helpers (armed by html.is-ready) ------------- */
+.moveUp, .moveUpF { transform: translate3d(0, 120%, 0); transition: transform .7s var(--ease-out); }
+.is-ready .moveUp, .is-ready .moveUpF { transform: translateZ(0); transition-delay: var(--delay, 0s); }
+.no-js .moveUp, .no-js .moveUpF { transform: none; }
+
+/* the source's other "ani_*" entrance helpers — all armed together by html.is-ready (after the preloader) */
+.fadeUp50 { opacity: 0; transform: translate3d(0, 50rem, 0); visibility: hidden; transition: transform 1s cubic-bezier(.2, .6, .1, 1), opacity 1s linear; }
+.is-ready .fadeUp50 { opacity: 1; transform: translateZ(0); visibility: visible; transition-delay: var(--delay, 0s); }
+.fadeUp20 { opacity: 0 !important; transform: translate3d(0, 20rem, 0); transition: transform 1s cubic-bezier(.2, .6, .1, 1), opacity 1s linear; }
+.is-ready .fadeUp20 { opacity: 1 !important; transform: translateZ(0); transition-delay: var(--delay, 0s); }
+.blurFade { opacity: 0; filter: blur(10px); transition: filter .6s linear, opacity .6s linear; }
+.is-ready .blurFade { opacity: 1; filter: blur(0); transition-delay: var(--delay, 0s); }
+.mediaParallax { transform: translate3d(0, 30%, 0) scale(1.2); transition: transform 1s var(--ease-out); }
+.is-ready .mediaParallax { transform: translateZ(0) scale(1); transition-delay: var(--delay, 0s); }
+.heroMediaClip { clip-path: inset(50% 50% 50% 50%); transition: clip-path 1.2s var(--ease-out); }
+.is-ready .heroMediaClip { clip-path: inset(0 0 0 0); transition-delay: var(--delay, 0s); }
+.mediaParallaxIn { transform: translate3d(0, 540rem, 0) scale(.7); transition: transform 1s var(--ease-out); }
+.mediaParallaxIn.mobileVid { transform: translate3d(0, 220rem, 0) scale(.7); }
+.is-ready .mediaParallaxIn { transform: translateZ(0) scale(1); transition-delay: var(--delay, 0s); }
+.fillWidth { transform: translate3d(-105%, 0, 0); transition: transform 1s cubic-bezier(.2, .6, .1, 1); }
+.is-ready .fillWidth { transform: translateZ(0); transition-delay: var(--delay, 0s); }
+.no-js .fadeUp50, .no-js .fadeUp20, .no-js .blurFade, .no-js .mediaParallax, .no-js .heroMediaClip, .no-js .mediaParallaxIn, .no-js .fillWidth { opacity: 1 !important; transform: none; filter: none; clip-path: none; visibility: visible; }
+
+.vh-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* static underline link (the big e-mail address on the contact page): a 2rem bar that retracts on hover */
+.link { position: relative; display: inline-block; }
+.link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 2rem; background-color: #fff; transform-origin: 0 100%; transition: transform .3s var(--ease-out), color .3s linear; }
+.link:hover::after { transform: scaleX(0); transform-origin: 100% 100%; }
+
+/* ---- Image wrapper: fade in once decoded ----------------------------- */
+.img { position: relative; object-fit: cover; opacity: 0; transition: opacity .3s linear; }
+.img.is-loaded { opacity: 1; }
+.img img { object-fit: cover; }
+.no-js .img { opacity: 1; }
+
+/* ---- Accessibility additions (invisible to mouse users) -------------- */
+.skip-link {
+  position: fixed; top: 12rem; left: 12rem; z-index: 99999; padding: 10rem 14rem;
+  background: #fff; color: #000; transform: translateY(-200%); transition: transform .3s var(--ease-out);
+}
+.skip-link:focus { transform: none; }
+:focus-visible { outline: 2rem solid var(--c-orange); outline-offset: 3rem; }
+.btn:focus-visible { outline-offset: 2rem; }
+@media (prefers-reduced-motion: reduce) {
+  .moveUp, .moveUpF { transition-duration: .01s; }
+}

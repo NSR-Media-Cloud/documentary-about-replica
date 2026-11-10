@@ -1,0 +1,99 @@
+/* ==========================================================================
+   sections.css — hero · scroll text · numbered values · founders slide-over
+   ========================================================================== */
+
+/* ------------------------------------------------------------------- Hero */
+.hero { overflow: clip; position: relative; display: flex; width: 100%; height: 300vh; height: 300svh; background: #000; }
+.hero__sticky { position: sticky; top: 0; left: 0; right: 0; width: 100%; height: 100vh; height: 100svh; }
+.hero__middle {
+  position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column;
+  gap: 24rem; width: 100%; height: 100%; z-index: 1;
+}
+.hero__middle > * { max-width: 684rem; text-align: center; }
+.hero__images { position: absolute; inset: 0; perspective: 100vw; }
+.hero__images > .img { position: absolute; width: 448rem; opacity: 0; transform: translateZ(-200vw); }
+.hero__images > .img:nth-child(1) { top: 82rem; left: 24rem; }
+.hero__images > .img:nth-child(2) { top: 82rem; right: 24rem; }
+.hero__images > .img:nth-child(3) { bottom: 24rem; right: 166rem; }
+.hero__images > .img:nth-child(4) { top: 82rem; left: 140rem; }
+.hero__images > .img:nth-child(5) { bottom: 24rem; left: 580rem; }
+.hero__images > .img:nth-child(6) { top: 80rem; right: 120rem; }
+.hero__scroll { position: absolute; bottom: 24rem; left: 50%; transform: translateX(-50%); overflow: clip; }
+@media screen and (max-width: 480px) {
+  .hero { height: 100vh; height: 100svh; }
+  .hero__images > .img { width: 170rem; }
+  .hero__images > .img:nth-child(1) { top: 90rem; left: 12rem; }
+  .hero__images > .img:nth-child(2) { top: 200rem; right: 12rem; }
+  .hero__images > .img:nth-child(3) { bottom: 60rem; right: auto; left: 12rem; width: 260rem; }
+  .hero__images > .img:nth-child(n+4) { display: none; }
+}
+
+/* ------------------------------------------------------------ Scroll text */
+.scroll-text { display: flex; justify-content: space-between; padding-right: 142rem; padding-top: 110rem; padding-bottom: 110rem; }
+.scroll-text__paragraph { position: relative; width: 920rem; color: var(--c-dim); }
+.scroll-text__tag { margin-top: 10rem; }
+.scroll-text__abs { position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1; }
+.scroll-text__abs.done { display: flex; flex-direction: column; align-items: flex-start; }
+.scroll-text__abs .line {
+  background: #fff; -webkit-background-clip: text; background-clip: text; color: transparent;
+  overflow: clip; white-space: nowrap; width: var(--scale, 0%);
+}
+/* Accessibility addition (invisible by default): lift the dim copy for high-contrast users */
+@media (prefers-contrast: more) { .scroll-text__paragraph { color: #9a9a9a; } }
+@media screen and (max-width: 480px) {
+  .scroll-text { flex-direction: column; justify-content: flex-start; gap: 24rem; padding-right: 12rem; padding-top: 60rem; padding-bottom: 60rem; }
+  .scroll-text__paragraph { width: 100%; }
+}
+
+/* --------------------------------------------------------------- Numbered */
+.numbered { padding-top: 110rem; padding-bottom: 110rem; }
+.numbered header { display: flex; justify-content: space-between; width: 802rem; margin-bottom: 60rem; }
+.numbered h3 { width: 448rem; }
+.numbered__tag { margin-top: 10rem; }
+.numbered__grid { display: grid; grid-template-columns: repeat(2, 330rem); column-gap: 260rem; row-gap: 60rem; margin-left: 354rem; }
+.numbered__number { margin-bottom: 20rem; }
+.numbered__heading { margin-bottom: 16rem; }
+@media screen and (max-width: 480px) {
+  .numbered { padding-top: 60rem; padding-bottom: 60rem; }
+  .numbered header { flex-direction: column; justify-content: flex-start; width: 100%; }
+  .numbered h3 { width: 100%; }
+  .numbered__grid { grid-template-columns: repeat(1, 1fr); row-gap: 40rem; margin-left: 0; }
+}
+
+/* --------------------------------------------------------------- Founders */
+.founders { position: relative; width: 100%; padding-top: 110rem; }
+.founders__images {
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: flex; align-items: center; flex-direction: column;
+  padding-top: 110rem; z-index: -1;
+}
+.founders__sticky { position: sticky; top: 0; display: flex; align-items: center; flex-direction: column; overflow: clip; }
+.founders__images .img { width: 100%; height: 100vh; height: 100dvh; position: absolute; }
+.founders__images .img:first-child { position: relative; z-index: 1; }
+.founders__images .img img { height: 100%; }
+.founders__overlay { position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: transparent; z-index: 2; }
+.founders__spacer { width: 100%; height: 100vh; height: 100dvh; }
+.founders__inner { display: flex; justify-content: space-between; width: 100%; }
+.founders__infos { position: sticky; top: 0; width: 802rem; }
+.founders__outer { width: 100%; height: 100vh; height: 100lvh; }
+.founders__info-wrap { position: sticky; top: 0; display: flex; align-items: flex-end; height: 100vh; height: 100lvh; padding-bottom: 80rem; }
+.founders__tag { margin-top: 9rem; }
+.founders__info { display: flex; justify-content: space-between; width: 100%; }
+.founders__info-inner { width: 448rem; }
+.founders__info-inner h3 { margin-bottom: 60rem; }
+.founders__info-inner .founders__body { margin-bottom: 32rem; }
+.founders__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24rem; width: 330rem; }
+.founders__small-wrap { position: sticky; top: 0; right: 0; display: flex; align-items: flex-end; width: 212rem; height: 100vh; height: 100svh; padding-bottom: 80rem; }
+.founders__small-inner { position: relative; width: 100%; padding: 8rem; overflow: clip; }
+.founders__small-overflow { height: 244rem; position: relative; overflow: clip; }
+.founders__small-overflow .img { height: 244rem; z-index: var(--index); }
+@media screen and (max-width: 480px) {
+  .founders__infos { width: 100%; }
+  .founders__info { flex-direction: column; gap: 24rem; }
+  .founders__info-wrap { padding-bottom: 40rem; }
+  .founders__tag { margin-top: 0; }
+  .founders__info-inner { width: 100%; }
+  .founders__info-inner h3 { margin-bottom: 40rem; }
+  .founders__info-inner .founders__body { margin-bottom: 28rem; }
+  .founders__grid { width: 100%; }
+  .founders__small-wrap { display: none; }
+}

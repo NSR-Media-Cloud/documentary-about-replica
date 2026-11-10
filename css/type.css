@@ -1,0 +1,92 @@
+/* ==========================================================================
+   type.css — the type scale (desktop @1440, phone @375)
+   Class names follow the audited site's scale: L / M / MC / XS / P / SP /
+   XSP + three mono sizes.  All sizes are in rem (see base.css).
+   ========================================================================== */
+
+.t-mono, .t-mono-s, .t-nct { font-family: var(--font-mono); }
+.t-ms, .t-xl, .t-l, .t-m, .t-mc, .t-xs, .t-s, .t-p, .t-sp, .t-xsp { font-family: var(--font-sans); }
+
+.t-mono, .t-mono-s { text-transform: uppercase; letter-spacing: calc(-.02em + var(--mono-fix)); }
+.t-mono   { font-size: 20rem; line-height: 20rem; }
+.t-mono-s { font-size: 14rem; line-height: 14rem; }
+.t-nct    { font-size: 12rem; line-height: 14rem; text-transform: uppercase; letter-spacing: calc(-.02em + var(--mono-fix)); }
+
+.t-mc { font-size: 40rem; line-height: 32rem; letter-spacing: calc(-.04em + var(--sans-fix)); font-weight: 400; }
+
+.t-l  { font-size: 92rem; line-height: 82rem; letter-spacing: calc(-.04em + var(--sans-fix)); }
+.t-l .wrap { margin-left: -4rem; }
+.t-l .line, .t-l a { padding: 0 4rem 10rem; margin-top: -10rem; }
+
+.t-ms { font-size: 60rem; line-height: 52rem; letter-spacing: calc(-.02em + var(--sans-fix)); }
+.t-xl { font-size: 116rem; line-height: 110rem; letter-spacing: calc(-.04em + var(--sans-fix)); }
+
+.t-m  { font-size: 72rem; line-height: 65rem; letter-spacing: calc(-.04em + var(--sans-fix)); }
+.t-m .wrap { margin-left: -3rem; }
+.t-m .line { padding: 0 0 8rem; }
+
+.t-s  { font-size: 44rem; line-height: 36rem; letter-spacing: calc(-.02em + var(--sans-fix)); }
+.t-xs { font-size: 34rem; line-height: 32rem; letter-spacing: calc(-.02em + var(--sans-fix)); }
+
+.t-p  { font-size: 20rem; line-height: 24rem; letter-spacing: calc(-.01em + var(--sans-fix)); }
+.t-p p { margin-bottom: 12rem; }
+.t-p :only-child { margin-top: 0; }
+.t-p :last-child { margin-bottom: 0; }
+/* lists inside rich text: counter / bullet sit in a 32rem gutter */
+.t-p ol, .t-p ul, .t-sp ol, .t-sp ul { position: relative; display: flex; flex-direction: column; row-gap: 8rem; margin-top: 20rem; margin-bottom: 20rem; }
+.t-p ol ol, .t-p ol ul, .t-p ul ol, .t-p ul ul, .t-sp ol ol, .t-sp ol ul, .t-sp ul ol, .t-sp ul ul { margin-top: 8rem !important; margin-bottom: 8rem !important; }
+.t-p ol, .t-sp ol { counter-reset: li-count; }
+.t-p li, .t-sp li { display: block; padding-left: 32rem; }
+.t-p ol > li, .t-sp ol > li { counter-increment: li-count; }
+.t-p ol li::before, .t-sp ol li::before { position: absolute; left: 8rem; content: counter(li-count) ". "; }
+.t-p ul li::before, .t-sp ul li::before { position: absolute; left: 8rem; content: "•"; }
+.t-sp ol, .t-sp ul { margin-top: 16rem; margin-bottom: 16rem; }
+.t-sp li { padding-left: 24rem; }
+.t-sp ol > li { padding-left: 32rem; }
+
+.t-sp { font-size: 14rem; line-height: 16rem; letter-spacing: calc(-.01em + var(--sans-fix)); }
+.t-sp p { margin-bottom: 8rem; }
+.t-sp :only-child { margin-top: 0; }
+.t-sp :last-child { margin-bottom: 0; }
+
+.t-xsp { font-size: 12rem; line-height: 12rem; letter-spacing: calc(-.02em + var(--sans-fix)); text-transform: uppercase; }
+
+/* Hover underline for text links (bottom bar draws in from the left) */
+.t-link { position: relative; display: flex; align-items: center; }
+.t-link::before {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1rem; background-color: #fff;
+  transform: scaleX(0); transform-origin: bottom right; transition: transform .3s var(--ease-out);
+}
+.t-link:hover::before, .t-link.is-active::before { transform: scaleX(1); transform-origin: bottom left; }
+.t-link.t-social::before { bottom: -2rem; }
+
+@media screen and (max-width: 480px) {
+  .t-mono { font-size: 14rem; line-height: 12rem; }
+  .t-l { font-size: 52rem; line-height: 48rem; letter-spacing: calc(-.045em + var(--sans-fix)); }
+  .t-l .wrap { margin-left: -2rem; }
+  .t-l .line, .t-l a { padding: 0 2rem 8rem; margin-top: -6rem; }
+  .t-xl { font-size: 72rem; line-height: 68rem; }
+  .t-ms { font-size: 32rem; line-height: 30rem; }
+  .t-m { font-size: 40rem; line-height: 38rem; letter-spacing: calc(-.02em + var(--sans-fix)); }
+  .t-mc { font-size: 32rem; line-height: 30rem; letter-spacing: calc(-.02em + var(--sans-fix)); }
+  .t-s { font-size: 28rem; line-height: 32rem; letter-spacing: calc(-.02em + var(--sans-fix)); }
+  .t-xs { font-size: 24rem; line-height: 22rem; letter-spacing: calc(-.02em + var(--sans-fix)); }
+  .t-p { font-size: 18rem; line-height: 22rem; letter-spacing: calc(-.01em + var(--sans-fix)); }
+  .t-link { text-decoration: underline; text-underline-offset: 2rem; text-decoration-thickness: 1rem; }
+  .t-link.t-no-mobile-line, .t-link.t-social { text-decoration: none; }
+  .t-link::before { content: normal; }
+}
+
+/* bold cuts and the 16/18 body size used on the home page */
+.t-mb, .t-xsb, .t-sb, .t-msb, .t-mp { font-family: var(--font-sans); }
+.t-mb { font-size: 72rem; line-height: 65rem; font-weight: 600; letter-spacing: calc(-.03em + var(--sans-fix)); }
+.t-xsb { font-size: 34rem; line-height: 32rem; font-weight: 600; letter-spacing: calc(-.03em + var(--sans-fix)); }
+.t-sb { font-size: 44rem; line-height: 36rem; font-weight: 600; letter-spacing: calc(-.02em + var(--sans-fix)); }
+.t-msb { font-size: 60rem; line-height: 52rem; font-weight: 600; letter-spacing: calc(-.02em + var(--sans-fix)); }
+.t-mp { font-size: 16rem; line-height: 18rem; letter-spacing: calc(-.01em + var(--sans-fix)); }
+@media screen and (max-width: 480px) {
+  .t-mb { font-size: 42rem; line-height: 40rem; letter-spacing: calc(-.03em + var(--sans-fix)); }
+  .t-xsb { font-size: 25rem; line-height: 24rem; }
+  .t-sb { font-size: 30rem; line-height: 31rem; }
+  .t-msb { font-size: 40rem; line-height: 38rem; }
+}

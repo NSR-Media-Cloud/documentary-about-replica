@@ -1,0 +1,28 @@
+// [name, original path, replica path]  (replica uses stand-in slugs where the original slug carries the brand or product names)
+module.exports = [
+  ['home', '/', '/'],
+  ['about', '/about', '/about'],
+  ['contact', '/contact', '/contact'],
+  ['courses', '/courses', '/courses'],
+  ['courses-grid', '/courses', '/courses'],   // same page after clicking the Grid toggle (fp.cjs handles the click)
+  ['c-documentary-foundations', '/courses/documentary-foundations', '/courses/nonfiction-foundations'],
+  ['c-advanced-documentary', '/courses/advanced-documentary', '/courses/advanced-storytelling'],
+  ['c-create-and-earn', '/courses/create-and-earn', '/courses/make-and-sell'],
+  ['c-perfect-cut', '/courses/perfect-cut', '/courses/the-final-cut'],
+  ['c-the-cinematic-eye', '/courses/the-cinematic-eye', '/courses/the-roving-eye'],
+  ['c-cinepath-pro', '/courses/cinepath-pro', '/courses/field-notes-pro'],
+  ['c-producing-foundations', '/courses/producing-foundations', '/courses/producing-essentials'],
+  ['c-short-film-blueprint', '/courses/short-film-blueprint', '/courses/short-film-playbook'],
+  ['m-creative-mastery', '/modules/creative-mastery', '/modules/craft-lab'],
+  ['m-pro-filmmaker-toolkit', '/modules/pro-filmmaker-toolkit', '/modules/maker-toolkit'],
+  ['m-industry-expert-sessions', '/modules/industry-expert-sessions', '/modules/guest-sessions'],
+  ['certification', '/certification', '/certification'],
+  ['funding', '/funding', '/funding'],
+  ['competition', '/short-documentary-competition', '/short-documentary-competition'],
+  ['accelerator', '/the-aod-accelerator', '/the-rta-accelerator'],
+  ['enterprise', '/enterprise', '/enterprise'],
+  ['faq', '/frequently-asked-questions', '/frequently-asked-questions'],
+  ['terms', '/legals/terms-of-use', '/legals/terms-of-use'],
+  ['privacy', '/legals/privacy-policy', '/legals/privacy-policy'],
+  ['notfound', '/no-such-page-xyz', '/no-such-page-xyz'],
+];

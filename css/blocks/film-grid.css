@@ -1,0 +1,61 @@
+/* filmGrid — 3-up grid of member films.  Hover: the still shrinks into corner marks and a preview plays; the other cards dim. */
+.film-grid { display: flex; flex-direction: column; align-items: center; gap: 110rem; padding-top: 110rem; padding-bottom: 110rem; }
+.film-grid header { width: 1156rem; display: flex; flex-direction: column; align-items: center; gap: 24rem; text-align: center; }
+.film-grid__grid { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 24rem; row-gap: 40rem; }
+.film-grid__grid:hover .film-grid__card:not(:hover) { opacity: .5; }
+
+.film-grid__card {
+  display: flex; flex-direction: column; justify-content: space-between; min-width: 0;
+  text-align: left; color: inherit; font: inherit; transition: opacity .3s ease;
+}
+.film-grid__visuals {
+  position: relative; width: 100%; height: 252rem; overflow: clip;
+  background:
+    linear-gradient(90deg, #fff 1rem, transparent 0) 0 0,
+    linear-gradient(90deg, #fff 1rem, transparent 0) 0 100%,
+    linear-gradient(270deg, #fff 1rem, transparent 0) 100% 0,
+    linear-gradient(270deg, #fff 1rem, transparent 0) 100% 100%,
+    linear-gradient(180deg, #fff 1rem, transparent 0) 0 0,
+    linear-gradient(180deg, #fff 1rem, transparent 0) 100% 0,
+    linear-gradient(0deg, #fff 1rem, transparent 0) 0 100%,
+    linear-gradient(0deg, #fff 1rem, transparent 0) 100% 100%;
+  background-repeat: no-repeat; background-size: 1px 1px;
+  transition: background-size .3s cubic-bezier(.25, 1, .5, 1);
+}
+.film-grid__image { height: 100%; display: flex; align-items: center; justify-content: center; transition: opacity .3s linear; }
+/* hover shrinks the picture from 448 x 252rem to 424 x 228rem inside the corner marks. It is done as a uniform scale plus a crop
+   (the stills are 16:9, so this is exactly what resizing the box under object-fit: cover does), which keeps layout out of the animation. */
+.film-grid__image img { width: 100%; height: 100%; transform: scale(1); clip-path: inset(0 0); transition: transform .3s cubic-bezier(.25, 1, .5, 1), clip-path .3s cubic-bezier(.25, 1, .5, 1); }
+.film-grid__visuals.is-show .film-grid__image { opacity: 0; }
+/* the "preview" layer — this study ships no footage, so it is a slow push-in on the still */
+.film-grid__video-wrap { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .15s linear; }
+.film-grid__visuals.is-show .film-grid__video-wrap { opacity: 1; }
+.film-grid__video { width: 100%; height: 100%; overflow: hidden; transform: scale(1); clip-path: inset(0 0); transition: transform .3s cubic-bezier(.25, 1, .5, 1), clip-path .3s cubic-bezier(.25, 1, .5, 1); }
+.film-grid__preview { display: block; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 60%; }
+.film-grid__visuals.is-show .film-grid__preview { animation: film-push 6s linear infinite alternate; }
+@keyframes film-push { from { transform: scale(1); } to { transform: scale(1.14) translate3d(-1.5%, -1%, 0); } }
+@media (prefers-reduced-motion: reduce) { .film-grid__visuals.is-show .film-grid__preview { animation: none; } }
+
+.film-grid__info { display: flex; gap: 24rem; margin-top: 12rem; }
+.film-grid__index { width: 94rem; margin-left: -4rem; flex: none; }
+.film-grid__button { display: none; }
+
+@media screen and (min-width: 481px) {
+  .film-grid__card:hover .film-grid__visuals { background-size: 12rem 12rem; }
+  /* 424 / 448 = .946429; the 16:9 picture then stands 238.5rem tall and 5.25rem top and bottom (5.547rem before scaling) are cropped to leave 228rem */
+  .film-grid__card:hover .film-grid__image img, .film-grid__card:hover .film-grid__video { transform: scale(.946429); clip-path: inset(5.547rem 0); }
+}
+@media screen and (max-width: 480px) {
+  .film-grid { align-items: flex-start; gap: 60rem; padding-top: 60rem; padding-bottom: 60rem; }
+  .film-grid header { width: 100%; align-items: flex-start; text-align: start; }
+  .film-grid__grid { grid-template-columns: repeat(1, 1fr); row-gap: 40rem; }
+  .film-grid__grid:hover .film-grid__card:not(:hover) { opacity: 1; }
+  .film-grid__visuals { height: 215rem; }
+  .film-grid__info { gap: 12rem; margin-top: 12rem; }
+  .film-grid__index { width: 79rem; margin-left: -2rem; }
+  .film-grid__video-wrap { display: none; }
+  /* only the first --limit cards until "Load More" is pressed */
+  .film-grid:not(.is-all) .film-grid__card:nth-child(n + 4) { display: none; }
+  .film-grid__button { display: flex; width: 100%; }
+  .film-grid.is-all .film-grid__button { display: none; }
+}

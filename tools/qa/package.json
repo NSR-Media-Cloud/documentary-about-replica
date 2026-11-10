@@ -1,0 +1,10 @@
+{
+  "name": "replica-qa",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Parity checks: original vs replica",
+  "dependencies": {
+    "puppeteer-core": "^23.11.1",
+    "axe-core": "^4.10.2"
+  }
+}

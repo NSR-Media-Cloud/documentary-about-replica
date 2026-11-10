@@ -1,0 +1,13 @@
+# dependencies and generated output
+node_modules/
+tools/qa/out/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# local secrets (the project uses none; keep it that way)
+.env
+.env.*

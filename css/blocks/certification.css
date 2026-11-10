@@ -1,0 +1,45 @@
+/* Certification page: numbered steps that scroll through a pinned corner frame, then the certificate list */
+.steps { position: relative; padding-top: 110rem; padding-bottom: 110rem; }
+.steps header { width: 684rem; text-align: center; margin: 0 auto 80rem; }
+.steps h2 { margin-bottom: 24rem; }
+.steps__wrap { position: relative; display: flex; align-items: center; flex-direction: column; }
+.steps__block { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16rem; width: 684rem; height: 352rem; }
+.steps__block p { width: 212rem; text-align: center; }
+.steps__sticky { position: absolute; inset: 0; pointer-events: none; }
+.steps__corners { position: sticky; top: calc(50% - 176rem); left: calc(50% - 342rem); width: 684rem; height: 352rem; }
+
+.certs { position: relative; padding-top: 110rem; padding-bottom: 110rem; }
+.certs header { display: flex; justify-content: space-between; gap: 24rem; width: 1156rem; margin: 0 0 60rem; }
+.certs h2 { margin-top: 10rem; }
+.certs h3 { width: 802rem; }
+.certs__badges { display: flex; gap: 24rem; margin: 0 0 80rem 354rem; }
+.certs__badges > * { width: 94rem; }
+.certs__badges .img { height: 94rem; display: block; }
+.certs__badges img { width: 100%; height: 100%; object-fit: contain; }
+.certs__list:hover .certs__item:not(:hover) { opacity: .3; }
+.certs__item {
+  display: grid; grid-template-columns: repeat(12, 1fr); grid-template-areas: "a a a b b b b b b c c c"; gap: 24rem;
+  padding: 40rem 0; color: #fff; border-top: 1rem solid #b3b3b3; transition: opacity .2s linear;
+}
+.certs__index { grid-area: a; }
+.certs__heading { grid-area: b; display: flex; flex-direction: column; gap: 12rem; }
+.certs__requirements { grid-area: c; display: flex; flex-direction: column; gap: 12rem; }
+.certs__requirements ul { margin-top: 0; gap: 4rem; color: #b3b3b3; }
+
+@media screen and (max-width: 480px) {
+  .steps { padding-top: 60rem; padding-bottom: 60rem; }
+  .steps header { width: 100%; text-align: start; margin: 0 0 60rem; }
+  .steps__block { gap: 8rem; width: 100%; height: 240rem; }
+  .steps__block p { width: 193rem; }
+  .steps__corners { top: calc(50% - 120rem); left: 0; width: 100%; height: 240rem; }
+  .certs { padding-top: 60rem; padding-bottom: 60rem; }
+  .certs header { flex-direction: column; width: 100%; margin: 0 0 60rem; }
+  .certs h2 { margin-top: 0; }
+  .certs h3 { width: 100%; }
+  .certs__badges { flex-wrap: wrap; margin: 0 0 60rem; }
+  .certs__badges > * { width: 101rem; }
+  .certs__badges .img { height: 101rem; }
+  .certs__list:hover .certs__item:not(:hover) { opacity: 1; }
+  .certs__item { grid-template-columns: repeat(2, 1fr); grid-template-areas: "a a" "b b" "c c"; }
+  .certs__heading { gap: 4rem; }
+}

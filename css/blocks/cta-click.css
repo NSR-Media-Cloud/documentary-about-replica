@@ -1,0 +1,24 @@
+/* Full-screen call to action: centred copy over a photo; clicking anywhere drops photos at the pointer */
+.cta-click {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100vw; height: 100vh; height: 100svh; overflow: clip; cursor: pointer;
+}
+.cta-click header { display: flex; flex-direction: column; align-items: center; gap: 40rem; width: 920rem; z-index: 2; }
+.cta-click__copy { display: flex; flex-direction: column; align-items: center; gap: 24rem; width: 100%; z-index: 2; }
+.cta-click h2 { text-align: center; }
+.cta-click__body { width: 100%; max-width: 400rem; text-align: center; margin: 0 auto; }
+.cta-click__buttons { display: flex; gap: 24rem; }
+.cta-click__bg { position: absolute; inset: 0; }
+.cta-click__bg .img { height: 100%; }
+.cta-click__bg img { width: 100%; height: 100%; object-fit: cover; }
+.cta-click__bg::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .2); z-index: 1; }
+.cta-click__drop { position: absolute; z-index: 1; width: 614rem; pointer-events: none; transform: translate(-50%, -50%); }
+.cta-click__drop img { width: 100%; height: auto; }
+
+@media screen and (max-width: 480px) {
+  .cta-click { align-items: flex-start; justify-content: flex-end; }
+  .cta-click header { gap: 32rem; width: 100%; padding: 0 12rem 60rem; justify-content: flex-start; align-items: flex-start; }
+  .cta-click__copy { gap: 20rem; }
+  .cta-click__body, .cta-click h2 { text-align: start; }
+  .cta-click__drop { width: 100%; }
+}
